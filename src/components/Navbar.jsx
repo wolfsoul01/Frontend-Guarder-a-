@@ -2,7 +2,7 @@ import logo from '/logo.svg'
 
 export function Navbar () {
   return (
-    <header className='inset-x-0 px-3 py-3 flex justify-between items-center bg-white/40 fixed backdrop-blur-sm shadow-md '>
+    <header className='inset-x-0 px-3 py-3 flex justify-between items-center bg-white/40  backdrop-blur-sm shadow-md mb-5  '>
       <picture className='flex items-center font-bold '>
         <img src={logo} alt='' width={'40px'} />
         <span>LOGO</span>
