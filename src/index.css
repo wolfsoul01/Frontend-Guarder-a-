@@ -2,3 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
+.row{
+    background-color: #222;
+    border-radius: 10px;
+    height: 4px;
+    margin: 4px 0;
+    transition: 0.4s cubic-bezier(0.68,-0.6,0.32,1.6);
+}
+
+.row:nth-of-type(1){
+    width: 50%;
+}
+.row:nth-of-type(2){
+    width: 100%;
+}
+.row:nth-of-type(3){
+    width: 75%;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"]:checked ~ .row:nth-of-type(1){
+    transform-origin: bottom;
+    transform: rotate(45deg)translate(8px,0px) ;
+}
+input[type="checkbox"]:checked ~ .row:nth-of-type(2){
+    transform-origin: top;
+    transform: rotate(-45deg) ;
+}
+input[type="checkbox"]:checked ~ .row:nth-of-type(3){
+    transform-origin: bottom;
+    transform: translate(9px,-11px) rotate(45deg)  ;
+}

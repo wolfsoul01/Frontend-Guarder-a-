@@ -1,4 +1,7 @@
+import HambMenu from './ui/HamburguerMenu'
+
 import logo from '/logo.svg'
+
 
 export function Navbar () {
   return (
@@ -27,7 +30,10 @@ export function Navbar () {
           </li>
         </ul>
       </nav>
-      <div className='flex gap-5 '>
+       <HambMenu/>
+      <div className=' gap-5 relative hidden md:flex '>
+        
+
         <button className='rounded-md px-5 py-2.5 text-sm font-medium text-white shadow group relative overflow-hidden '>
           Login
           <span
