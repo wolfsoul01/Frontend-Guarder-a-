@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       backgroundColor:{
-        primary:"rgb(252, 211, 77)"
+        primary:"#FFD700"
       },
       textColor:{
-        primary:"rgb(252, 211, 77)"
+        primary:"#FFD700"
       }
     },
   },

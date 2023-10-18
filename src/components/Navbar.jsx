@@ -11,7 +11,7 @@ export function Navbar () {
         <span>LOGO</span>
       </picture>
       <nav>
-        <ul className='flex justify-around gap-6 text-slate-800  [&>li]:cursor-pointer font-medium  flex-grow  text-xl '>
+        <ul className='flex justify-around gap-6 text-[#222]  [&>li]:cursor-pointer font-medium  flex-grow  text-xl '>
           <li className='relative group '>
             Inicio
             <span className='absolute left-0 bottom-0 bg-teal-400 w-0 group-hover:w-full h-[2px] transition-all duration-150 '></span>
