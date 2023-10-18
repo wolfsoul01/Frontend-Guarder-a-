@@ -2,16 +2,16 @@ import { Navbar } from './Navbar'
 
 export function Home () {
   return (
-    <section className=''>
+    <section className='h-full '>
       <Navbar />
 
-        <picture className=''>
+       
           <img
             src='/fondo_home.jpg'
             alt=''
-            className=' absolute top-0 left-0 -z-10 w-full h-full object-cover '
+            className=' absolute top-0 left-0 -z-10 w-full h-[500px] max-h-fit object-cover '
           />
-        </picture>
+       
       <header className='p-3 '>
 
         <section className='flex flex-col gap-3 justify-center items-center max-w-xl md:max-w-2xl my-0 mx-auto backdrop-blur-sm p-5'>
