@@ -17,7 +17,7 @@ export function Home () {
         <header className='mt-10'>
         <h1 className=' text-8xl text-yellow-300 font-bold'>Guarderia Matanzas</h1>
         </header>
-        <p className='text-yellow-300 text-xl'>Guardando risas y construyendo sonrisas, ¡donde la infancia brilla!</p>
+        <p className='text-yellow-300 text-xl '>Guardando risas y construyendo sonrisas, ¡donde la infancia brilla!</p>
         
         <button className='py-2 px-6 text-2xl bg-amber-300 relative hover:translate-x-5 transition-all duration-150  font-semibold'>
             <span className='absolute top-0 left-0 inset-0 border-amber-400 border'></span>

@@ -34,14 +34,14 @@ export function Navbar () {
       <div className=' gap-5 relative hidden md:flex '>
         
 
-        <button className='rounded-md px-5 py-2.5 text-sm font-medium text-white shadow group relative overflow-hidden '>
+        <button className='rounded-md px-5 py-2.5 text-sm font-medium text-white shadow group relative overflow-hidden hover:text-black '>
           Login
           <span
-            className='absolute inset-y-0 left-0 w-[2px] bg-teal-600 transition-all group-hover:w-full group-active:bg-indigo-500 
+            className='absolute inset-y-0 left-0 w-[2px] bg-primary transition-all group-hover:w-full group-active:bg-indigo-500 
             group-hover:opacity-100 -z-10'
           ></span>
         </button>
-        <button className='rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 hover:bg-gray-300 '>
+        <button className='rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-black hover:bg-gray-300 '>
           Registrarte
         </button>
       </div>
