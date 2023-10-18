@@ -12,7 +12,7 @@ export function Navbar () {
   return (
     <>
       <header className='inset-x-0 px-3 py-3 flex flex-col md:flex-row justify-between items-center bg-white/40  backdrop-blur-sm shadow-md mb-5  '>
-        <div className=' flex justify-between items-center'>
+        <div className='w-full flex justify-between items-center'>
           <picture className='flex items-center font-bold  '>
             <img src={logo} alt='' width={'40px'} />
             <span>LOGO</span>
