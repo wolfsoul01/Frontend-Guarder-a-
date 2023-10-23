@@ -1,6 +1,7 @@
 import { Table } from 'flowbite-react'
 export function MasterDash () {
   return (
+    <section className='max-w-[100vw] overflow-x-auto  p-5'>
     <Table>
       <Table.Head>
         <Table.HeadCell>Nombre</Table.HeadCell>
@@ -62,5 +63,6 @@ export function MasterDash () {
         </Table.Row>
       </Table.Body>
     </Table>
+    </section>
   )
 }

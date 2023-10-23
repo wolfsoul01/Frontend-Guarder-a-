@@ -49,16 +49,16 @@ export function Navbar () {
           {/* NavBar for Destokp */}
 
           <div className=' gap-5 relative hidden md:flex '>
-            <button className='rounded-md px-5 py-2.5 text-sm font-medium text-white shadow group relative overflow-hidden hover:text-black '>
               <NavLink to={'/login'}>
+            <button className='rounded-md px-5 py-2.5 text-sm font-medium text-white shadow group relative overflow-hidden hover:text-black '>
               Login
 
-              </NavLink>
               <span
                 className='absolute inset-y-0 left-0 w-[2px] bg-primary transition-all group-hover:w-full group-active:bg-indigo-500 
-            group-hover:opacity-100 -z-10'
-              ></span>
+                group-hover:opacity-100 -z-10'
+                ></span>
             </button>
+                </NavLink>
             <button className='rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-black hover:bg-gray-300 '>
               Registrarte
             </button>
