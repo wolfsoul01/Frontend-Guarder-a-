@@ -1,5 +1,5 @@
 import { Navbar } from '../components/Navbar'
-
+import {Aside} from '../components/Aside'
 export function Home () {
   return (
     <section className='h-full '>
@@ -28,6 +28,7 @@ export function Home () {
           </button>
         </section>
       </header>
+      <Aside/>
     </section>
   )
 }
