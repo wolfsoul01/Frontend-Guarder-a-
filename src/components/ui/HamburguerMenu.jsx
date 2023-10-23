@@ -1,5 +1,5 @@
 // eslint-disable-next-line react/prop-types
-export default function HambMenu ({ handleClick }) {
+export function HambMenu ({ handleClick }) {
   return (
     <>
       <label

@@ -1,19 +1,17 @@
-import { Navbar } from './Navbar'
+import { Navbar } from '../components/Navbar'
 
 export function Home () {
   return (
     <section className='h-full '>
       <Navbar />
 
-       
-          <img
-            src='/fondo_home.jpg'
-            alt=''
-            className=' absolute top-0 left-0 -z-10 w-full h-[500px] max-h-fit object-cover '
-          />
-       
-      <header className='p-3 '>
+      <img
+        src='/fondo_home.jpg'
+        alt=''
+        className=' absolute top-0 left-0 -z-10 w-full h-[500px] max-h-fit object-cover '
+      />
 
+      <header className='p-3 '>
         <section className='flex flex-col gap-3 justify-center items-center max-w-xl md:max-w-2xl my-0 mx-auto backdrop-blur-sm p-5'>
           <header className='mt-10'>
             <h1 className='text-4xl md:text-6xl lg:text-6xl text-primary  font-bold text-center'>

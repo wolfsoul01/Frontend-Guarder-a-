@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import HambMenu from './ui/HamburguerMenu'
+import {HambMenu} from './ui/HamburguerMenu'
+import {NavLink} from 'react-router-dom'
 
 import logo from '/logo.svg'
 
@@ -26,7 +27,9 @@ export function Navbar () {
           <nav className={` ${!isOpen ? 'hidden' : ''} md:block`}>
             <ul className='flex flex-col md:flex-row justify-around gap-6 text-[#222]  [&>li]:cursor-pointer font-medium  flex-grow  text-xl '>
               <li className='relative group '>
-                Inicio
+              
+                 Inicio
+
                 <span className='absolute left-0 bottom-0 bg-teal-400 w-0 group-hover:w-full h-[2px] transition-all duration-150 '></span>
               </li>
               <li className='relative group '>
@@ -38,7 +41,7 @@ export function Navbar () {
                 <span className='absolute left-0 bottom-0 bg-teal-400 w-0 group-hover:w-full h-[2px] transition-all duration-150 '></span>
               </li>
               <li className='relative group '>
-                Matricula
+              <NavLink to={'/dashbord'}>Dashbord</NavLink>
                 <span className='absolute left-0 bottom-0 bg-teal-400 w-0 group-hover:w-full h-[2px] transition-all duration-150 '></span>
               </li>
             </ul>
@@ -47,7 +50,10 @@ export function Navbar () {
 
           <div className=' gap-5 relative hidden md:flex '>
             <button className='rounded-md px-5 py-2.5 text-sm font-medium text-white shadow group relative overflow-hidden hover:text-black '>
+              <NavLink to={'/login'}>
               Login
+
+              </NavLink>
               <span
                 className='absolute inset-y-0 left-0 w-[2px] bg-primary transition-all group-hover:w-full group-active:bg-indigo-500 
             group-hover:opacity-100 -z-10'
