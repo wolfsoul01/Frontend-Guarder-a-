@@ -6,8 +6,8 @@ function Dashbord () {
     <>
       <Navbar />
 
-        <div className='bg-slate-600  w-full min-h-screen pt-5'>
-      <main className='max-w-xl mx-auto' >
+        <div className='bg-slate-600  w-full min-h-screen pt-5 flex justify-center '>
+      <main className='max-w-3xl overflow-x-auto' >
           <Outlet />
       </main>
         </div>
