@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {HambMenu} from './ui/HamburguerMenu'
+import {HambMenu} from './Icons'
 import {NavLink} from 'react-router-dom'
 
 import logo from '/logo.svg'
