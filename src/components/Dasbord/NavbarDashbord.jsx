@@ -1,18 +1,15 @@
 import { NavLink } from 'react-router-dom'
-import { HambMenu } from './Icons'
+import { HambMenu } from '../Icons'
 import { useState } from 'react'
 export function Navbar () {
+  const [isOpen, setisOpen] = useState(false)
 
-  const [isOpen,setisOpen]=useState(false)
-
-  const handleClick=()=>{
+  const handleClick = () => {
     setisOpen(!isOpen)
   }
 
   return (
     <>
-
-
       <nav className='bg-white  dark:bg-gray-900 dark:border-gray-700'>
         <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
           <header className=' flex justify-between w-full md:w-fit'>
@@ -30,7 +27,7 @@ export function Navbar () {
             <HambMenu handleClick={handleClick} />
           </header>
 
-          <div className={`${!isOpen ? 'hidden':''} md:block`}>
+          <div className={`${!isOpen ? 'hidden' : ''} md:block`}>
             <ul className='text-white flex flex-col md:flex-row gap-5  flex-grow  '>
               <li>
                 <NavLink to={'children'} className=''>
