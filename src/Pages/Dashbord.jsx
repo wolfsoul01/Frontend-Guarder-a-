@@ -7,10 +7,10 @@ function Dashbord () {
       {/* <Navbar /> */}
       <Sidebar/>
 
-      <div className='bg-slate-600  w-full min-h-screen pt-5  '>
-        <main className=' overflow-hidden min-w-fit'>
+      <div className='  '>
+     
           <Outlet />
-        </main>
+       
       </div>
     </>
   )

@@ -3,8 +3,7 @@ import { Home } from './Pages/Home'
 import { Routes, Route } from 'react-router-dom'
 import Login from './Pages/Login'
 //import { ChildrentDash } from './components/Dasbord/ChildrentDash'
-import { MasterDash } from './components/Dasbord/MasterDash'
-import { Content } from './components/Dasbord/Content'
+import { KidsDash } from './components/Dasbord/KidsDash'
 
 function App () {
   return (
@@ -13,8 +12,10 @@ function App () {
         <Route path='/' element={<Home />} />
 
         <Route path='/dashbord' element={<Dashbord />}>
-          <Route path='' element={<Content />} />
-          <Route path='master' element={<MasterDash />} />
+          <Route path='' element={<KidsDash />} />
+          <Route path='master' element={<>
+           
+          </>} />
         </Route>
         <Route path='/login' element={<Login />} />
 
