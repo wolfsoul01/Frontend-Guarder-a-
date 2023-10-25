@@ -1,5 +1,7 @@
 import { Table } from 'flowbite-react'
 import { Delet, Edit, More } from '../../Icons'
+import DefaultModal from './Modal'
+import { useState } from 'react'
 
 const info = [
   {
@@ -163,8 +165,19 @@ const info = [
   }
 ]
 export function ChildrentDash () {
+  const [openModal, setopenModal] = useState(false)
+
+  const [selectKid, setKid] = useState()
+
   return (
     <section className=' overflow-x-auto mt-4'>
+      {openModal && (
+        <DefaultModal
+          handleModal={() => setopenModal(false)}
+          selectKid={selectKid}
+          openModal={openModal}
+        />
+      )}
       <Table className=''>
         <Table.Head>
           <Table.HeadCell>Nombre</Table.HeadCell>
@@ -201,7 +214,13 @@ export function ChildrentDash () {
                   </span>
                 </Table.Cell>
                 <Table.Cell className='flex gap-5'>
-                  <button className='cursor-pointer'>
+                  <button
+                    className='cursor-pointer'
+                    onClick={() => {
+                      setKid(kid)
+                      setopenModal(true)
+                    }}
+                  >
                     <More />
                   </button>
                   <button className='cursor-pointer'>
