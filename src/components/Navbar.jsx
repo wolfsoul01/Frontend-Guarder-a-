@@ -12,9 +12,12 @@ export function Navbar () {
   }
   return (
     <>
-      <header className='inset-x-0 px-3 py-5 flex flex-col md:flex-row justify-between items-center bg-white/40  backdrop-blur-sm shadow-md mb-5  '>
+      <header className='inset-x-0 px-3 py-5  bg-white/40  backdrop-blur-sm shadow-md mb-5  '>
+
+        <nav className=' mx-auto max-w-7xl flex flex-col md:flex-row justify-between items-center'>
+
         <div className='w-full flex justify-between items-center'>
-          <picture className='flex items-center font-bold  '>
+          <picture className='flex items-center font-bold relative '>
             {/* <img src={logo} alt='' width={'40px'} />
             <span>LOGO</span> */}
             <a
@@ -24,7 +27,7 @@ export function Navbar () {
               Skilline
             </a>
             <svg
-              className='h-11 z-40 absolute  top-2 left-0'
+              className='h-11 z-40 absolute  -top-2 -left-2'
               viewBox='0 0 79 79'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
@@ -78,6 +81,7 @@ export function Navbar () {
             </button>
           </div>
         </div>
+        </nav>
       </header>
     </>
   )
