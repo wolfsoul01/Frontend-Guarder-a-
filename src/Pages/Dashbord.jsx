@@ -8,9 +8,7 @@ function Dashbord () {
       <Sidebar/>
 
       <div className='  '>
-     
           <Outlet />
-       
       </div>
     </>
   )

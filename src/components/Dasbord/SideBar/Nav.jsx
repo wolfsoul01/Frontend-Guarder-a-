@@ -1,3 +1,5 @@
+import {NavLink} from 'react-router-dom'
+import react from '../../../assets/react.svg'
 export function Nav () {
   return (
     <>
@@ -27,25 +29,25 @@ export function Nav () {
                   ></path>
                 </svg>
               </button>
-              <a href='https://flowbite.com' className='flex ml-2 md:mr-24'>
+              <NavLink  to={'/'} className='flex ml-2 md:mr-24'>
                 <span className='self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white'>
                   Logo
                 </span>
-              </a>
+              </NavLink>
             </div>
             <div className='flex items-center'>
               <div className='flex items-center ml-3 relative'>
                 <div>
                   <button
                     type='button'
-                    className='flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600'
+                    className='flex text-sm  rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600'
                     aria-expanded='false'
                     data-dropdown-toggle='dropdown-user'
                   >
                     <span className='sr-only'>Open user menu</span>
                     <img
-                      className='w-8 h-8 rounded-full'
-                      src=''
+                      className='w-8 h-8 rounded-full bg-transparent'
+                      src={react}
                       alt='user photo'
                     />
                   </button>

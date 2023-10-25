@@ -5,9 +5,8 @@ function Sidebar () {
   return (
     <>
       <Nav></Nav>
-      <AsideBar></AsideBar>
 
-      
+      <AsideBar></AsideBar>
     </>
   )
 }

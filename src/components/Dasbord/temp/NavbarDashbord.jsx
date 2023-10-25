@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { HambMenu } from '../Icons'
+import { HambMenu } from '../../Icons'
 import { useState } from 'react'
 export function Navbar () {
   const [isOpen, setisOpen] = useState(false)

@@ -1,27 +1,27 @@
 import { Table } from 'flowbite-react'
-import { Delet, Edit, More } from '../Icons'
+import { Delet, Edit, More } from '../../Icons'
 
 const info = [
   {
-    id: 1, 
+    id: 1,
     nombre: 'Juan',
-    apellidos: 'Gómez García', 
+    apellidos: 'Gómez García',
     fechaNacimiento: '2018-05-02',
     edad: 4,
     aula: 'Azul',
     estado: true,
     alergias: ['cacahuates'],
-    contactoEmergencia: {  
+    contactoEmergencia: {
       nombre: 'Maria Gómez',
       telefono: '5544332211',
       parentesco: 'madre'
     }
   },
-  { 
+  {
     id: 2,
     nombre: 'María',
     apellidos: 'Hernández López',
-    fechaNacimiento: '2019-03-25',  
+    fechaNacimiento: '2019-03-25',
     edad: 3,
     nivelEducativo: 'maternal',
     aula: 'Verde',
@@ -54,7 +54,7 @@ const info = [
     nombre: 'Daniela',
     apellidos: 'Martínez Torres',
     fechaNacimiento: '2020-08-30',
-    edad: 2,    
+    edad: 2,
     nivelEducativo: 'maternal',
     aula: 'Morado',
     estado: true,
@@ -64,10 +64,10 @@ const info = [
       telefono: '5566543219',
       parentesco: 'padre'
     }
-  },  
+  },
   {
     id: 5,
-    nombre: 'Sofía', 
+    nombre: 'Sofía',
     apellidos: 'Díaz Flores',
     fechaNacimiento: '2019-11-12',
     edad: 3,
@@ -87,18 +87,18 @@ const info = [
     apellidos: 'González Ortíz',
     fechaNacimiento: '2018-03-19',
     edad: 4,
-    nivelEducativo: 'preescolar',    
+    nivelEducativo: 'preescolar',
     aula: 'Rojo',
     estado: false,
     alergias: ['gluten'],
     contactoEmergencia: {
       nombre: 'Roberto González',
       telefono: '5559871265',
-      parentesco: 'padre' 
+      parentesco: 'padre'
     }
   },
   {
-    id: 7, 
+    id: 7,
     nombre: 'Emilia',
     apellidos: 'Ruíz Cervantes',
     fechaNacimiento: '2017-12-02',
@@ -108,7 +108,7 @@ const info = [
     estado: true,
     alergias: null,
     contactoEmergencia: {
-      nombre: 'Jimena Ruíz',  
+      nombre: 'Jimena Ruíz',
       telefono: '5587452136',
       parentesco: 'madre'
     }
@@ -138,14 +138,14 @@ const info = [
     nivelEducativo: 'preescolar',
     aula: 'Verde',
     estado: true,
-    alergias: null, 
+    alergias: null,
     contactoEmergencia: {
       nombre: 'Patricia Reyes',
       telefono: '5556633225',
       parentesco: 'madre'
     }
   },
-  {  
+  {
     id: 10,
     nombre: 'Diego',
     apellidos: 'Luna Medina',
