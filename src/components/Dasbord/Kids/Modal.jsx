@@ -4,11 +4,18 @@ import { Label, TextInput } from 'flowbite-react'
 
 // eslint-disable-next-line react/prop-types
 export default function DefaultModal ({ openModal, handleModal, selectKid }) {
+  // eslint-disable-next-line react/prop-types
+  const {
+    nombre,
+    apellidos,
+    fechaNacimiento,
+    edad,
+    alergias=[],
+    contactoEmergencia={}
+  } = selectKid
 
-    // eslint-disable-next-line react/prop-types
-    const {nombre,apellidos,fechaNacimiento,edad,alergias,contactoEmergencia}= selectKid
-
-    const sos= Object.values(contactoEmergencia).join(' ')
+  const sos = Object.values(contactoEmergencia).join(' ')
+  const alerg = alergias ? alergias.join(' ') : 'Ninguna'
   return (
     <>
       <Modal show={openModal} onClose={handleModal}>
@@ -43,7 +50,7 @@ export default function DefaultModal ({ openModal, handleModal, selectKid }) {
             />
           </div>
           <div className='flex max-w-md flex-col gap-4'>
-          <Label htmlFor='disabledInput2'>Edad</Label>
+            <Label htmlFor='disabledInput2'>Edad</Label>
             <TextInput
               disabled
               id='disabledInput2'
@@ -52,7 +59,7 @@ export default function DefaultModal ({ openModal, handleModal, selectKid }) {
               type='text'
               value={edad}
             />
-          <Label htmlFor='disabledInput2'>Alerjias</Label>
+            <Label htmlFor='disabledInput2'>Alerjias</Label>
             <TextInput
               disabled
               id='disabledInput2'
@@ -60,9 +67,9 @@ export default function DefaultModal ({ openModal, handleModal, selectKid }) {
               readOnly
               type='text'
               // eslint-disable-next-line react/prop-types
-              value={alergias.join(' ')}
+              value={alerg}
             />
-          <Label htmlFor='disabledInput2'>Contacto Emergencia </Label>
+            <Label htmlFor='disabledInput2'>Contacto Emergencia </Label>
             <TextInput
               disabled
               id='disabledInput2'
