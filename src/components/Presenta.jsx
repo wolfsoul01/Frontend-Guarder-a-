@@ -2,8 +2,8 @@ export default function Present(){
 
 
     return(
-        <section className="max-w-xl mx-auto md:max-w-5xl p-5">
-            <div className="flex flex-col md:flex-row items-center mt-12">
+        <section className="max-w-xl mx-auto md:max-w-5xl p-5 mt-12">
+            <div className="flex flex-col md:flex-row items-center ">
 			<div data-aos="fade-right" className="md:w-5/12 ">
 				<h1 className="text-darken font-semibold text-3xl leading-tight lg:pr-32"><span className="text-yellow-500 block">Sobre  </span>Nosotros</h1>
 
