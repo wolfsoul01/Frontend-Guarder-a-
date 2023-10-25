@@ -8,7 +8,7 @@ function Info () {
           <span className='text-yellow-500'> Educativas</span>
         </h1>
         <p className='py-5 lg:pr-32 font-semibold'>
-          En [] implementamos una gran variedad de actividades educativas
+          En <span className="uppercase text-yellow-500 font-semibold">guardy-yamy</span> implementamos una gran variedad de actividades educativas
           divertidas para el desarrollo integral de los niños:
         </p>
 

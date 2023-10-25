@@ -8,7 +8,7 @@ function Login () {
            
 
             <p className='mt-4 text-gray-500 relative'>
-              Bienvenidos a [], un lugar mágico donde los niños{' '}
+              Bienvenidos a <span className="uppercase text-yellow-500 font-semibold">guardy-yamy</span>, un lugar mágico donde los niños{' '}
               <span className='text-yellow-500 font-medium'>aprenden</span> y se{' '}
               <span className='text-yellow-500 font-medium'>divierten</span> a
               través del juego y la imaginación. Inicia sesión para formar parte
