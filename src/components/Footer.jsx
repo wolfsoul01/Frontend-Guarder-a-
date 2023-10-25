@@ -9,7 +9,7 @@ export default function DefaultFooter() {
         href="#"
         year={2023}
       />
-      <Footer.LinkGroup>
+      <Footer.LinkGroup className='flex gap-x-3'>
         <Footer.Link href="#">
           Sobre Nosotros
         </Footer.Link>
