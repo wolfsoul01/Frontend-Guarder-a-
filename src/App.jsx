@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom'
 import Login from './Pages/Login'
 //import { ChildrentDash } from './components/Dasbord/ChildrentDash'
 import { KidsDash } from './components/Dasbord/KidsDash'
+import { MasterDash } from './components/Dasbord/Master/MasterDash'
 
 function App () {
   return (
@@ -14,8 +15,8 @@ function App () {
 
         <Route path='/dashbord' element={<Dashbord />}>
           <Route path='' element={<KidsDash />} />
-          <Route path='master' element={<>
-           
+          <Route path='maestro' element={<>
+           <MasterDash/>
           </>} />
         </Route>
         <Route path='/login' element={<Login />} />

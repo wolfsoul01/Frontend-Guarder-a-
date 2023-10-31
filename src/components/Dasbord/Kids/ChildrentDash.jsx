@@ -168,6 +168,7 @@ const info = [
   }
 ]
 export function ChildrentDash () {
+  
   const [openModalEdit, setModalEdit] = useState(false)
   const [openModalShow, setModalShow] = useState(false)
   const [openModalCreate, setModalCreate] = useState(false)
