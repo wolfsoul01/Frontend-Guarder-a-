@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    
+}
 .row{
     background-color: #222;
     border-radius: 10px;

@@ -1,7 +1,8 @@
 import { Table } from 'flowbite-react'
 import { Delet, Edit, More } from '../../Icons'
-import ModalEdit from './Modal'
+import ModalEdit from './ModalEdit'
 import { useState } from 'react'
+import ModalShow from './ModalShow'
 
 const info = [
   {
@@ -166,6 +167,7 @@ const info = [
 ]
 export function ChildrentDash () {
   const [openModal, setopenModal] = useState(false)
+  const [openModalEdit, setModal] = useState(false)
 
   const [selectKid, setKid] = useState()
 
@@ -176,6 +178,13 @@ export function ChildrentDash () {
           handleModal={() => setopenModal(false)}
           selectKid={selectKid}
           openModal={openModal}
+        />
+      )}
+      {openModalEdit && (
+        <ModalShow
+          handleModal={() => setModal(false)}
+          selectKid={selectKid}
+          openModal={openModalEdit}
         />
       )}
       <Table className=''>
@@ -214,15 +223,19 @@ export function ChildrentDash () {
                   </span>
                 </Table.Cell>
                 <Table.Cell className='flex gap-5'>
-                  <button
-                    className='cursor-pointer'
-                  >
+                  <button className='cursor-pointer' onClick={()=>{
+                    setKid(kid)
+                    setModal(true)
+                  }}>
                     <More />
                   </button>
-                  <button className='cursor-pointer' onClick={() => {
+                  <button
+                    className='cursor-pointer'
+                    onClick={() => {
                       setKid(kid)
                       setopenModal(true)
-                    }} >
+                    }}
+                  >
                     <Edit />
                   </button>
                   <button className='cursor-pointer'>
