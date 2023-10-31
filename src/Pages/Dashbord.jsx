@@ -1,19 +1,20 @@
 import { Outlet } from 'react-router-dom'
 // import { Navbar } from '../components/Dasbord/NavbarDashbord'
 import Sidebar from '../components/Dasbord/Sidebar'
-import {  Flowbite } from 'flowbite-react';
+import { Flowbite } from 'flowbite-react'
 function Dashbord () {
   return (
     <>
-    <Flowbite>
+      <div className=''>
+        <Flowbite>
+          {/* <Navbar /> */}
+          <Sidebar />
 
-      {/* <Navbar /> */}
-      <Sidebar/>
-
-      <div className='dark'>
-          <Outlet />
+          <div className='w-full h-full'>
+            <Outlet />
+          </div>
+        </Flowbite>
       </div>
-    </Flowbite>
     </>
   )
 }

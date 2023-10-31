@@ -8,6 +8,7 @@ import { KidsDash } from './components/Dasbord/KidsDash'
 function App () {
   return (
     <>
+
       <Routes>
         <Route path='/' element={<Home />} />
 
