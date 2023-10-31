@@ -1,9 +1,8 @@
 import { Table } from 'flowbite-react'
-import { Delet, Edit, More } from '../../Icons'
+import { Add, Delet, Edit, More } from '../../Icons'
 import ModalEdit from './ModalEdit'
 import { useState } from 'react'
 import ModalShow from './ModalShow'
-import { ButtonDef } from '../../ui'
 import ModalCreate from './ModalCrate'
 import { Navigate } from './Navigate'
 const info = [
@@ -168,7 +167,6 @@ const info = [
   }
 ]
 export function ChildrentDash () {
-  
   const [openModalEdit, setModalEdit] = useState(false)
   const [openModalShow, setModalShow] = useState(false)
   const [openModalCreate, setModalCreate] = useState(false)
@@ -180,7 +178,23 @@ export function ChildrentDash () {
   return (
     <section className=' overflow-x-auto mt-4'>
       <header className='my-2'>
-        <ButtonDef handleclick={() => setModalCreate(true)}>Add</ButtonDef>
+        <h2>Todos los usuarios </h2>
+
+        <div className=' flex items-center gap-2'>
+        <input type="text" name="search" id="users-search" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  focus:border-slate-500 block  p-2.5 w-1/2" placeholder="Search for users"/>
+
+          <aside className='flex gap-2 border-l border-gray-400 py-2 px-3'>
+           <button className='flex ' onClick={()=>setModalCreate(true)}>
+              <Add/>
+              Add User
+           </button>
+            
+          </aside>
+
+          <div>
+        
+          </div>
+        </div>
       </header>
 
       {/* Modales  */}
@@ -209,26 +223,26 @@ export function ChildrentDash () {
       )}
       {/* Modales  */}
 
-      <Table className=''>
-        <Table.Head>
-          <Table.HeadCell>Nombre</Table.HeadCell>
-          <Table.HeadCell>Apellido</Table.HeadCell>
-          <Table.HeadCell>Edad</Table.HeadCell>
-          <Table.HeadCell>Sala</Table.HeadCell>
-          <Table.HeadCell>Fecha de ingreso</Table.HeadCell>
-          <Table.HeadCell>Status</Table.HeadCell>
-          <Table.HeadCell>More..</Table.HeadCell>
+      <Table className='shadow-lg'>
+        <Table.Head className=' [&>div]:bg-black'>
+          <Table.HeadCell className='bg-zinc-500 text-white'>Nombre</Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>Apellido</Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>Edad</Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>Sala</Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>Fecha de ingreso</Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>Status</Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>More..</Table.HeadCell>
         </Table.Head>
-        <Table.Body className='divide-y'>
+        <Table.Body className=''>
           {kids.map((kid, i) => {
             return (
               <Table.Row
                 key={kid.id}
                 className={`${
                   i % 2 === 0
-                    ? 'bg-slate-600 text-white'
-                    : 'bg-slate-200 text-black'
-                } hover:shadow-sm-light `}
+                    ? 'bg-gray-700 text-white'
+                    : 'text-black'
+                } hover: `}
               >
                 <Table.Cell>{kid.nombre}</Table.Cell>
                 <Table.Cell>{kid.apellidos}</Table.Cell>
@@ -272,7 +286,7 @@ export function ChildrentDash () {
           })}
         </Table.Body>
       </Table>
-    <Navigate/>
+      <Navigate />
     </section>
   )
 }

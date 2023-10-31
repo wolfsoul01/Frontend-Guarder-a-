@@ -1,4 +1,4 @@
-import { ChildrentDash } from './Kids/ChildrentDash'
+import { ChildrentDash } from './Kids/KidsDashContainer'
 export function KidsDash () {
   return (
     <>
