@@ -4,19 +4,24 @@ import { Button, Modal } from 'flowbite-react'
 import { Label, TextInput } from 'flowbite-react'
 
 // eslint-disable-next-line react/prop-types
-export default function ModalEdit ({ openModal, handleModal, selectKid }) {
-  // eslint-disable-next-line react/prop-types
+// eslint-disable-next-line react/prop-types
+export default function ModalEdit ({
+  openModal,
+  handleModal,
+  selectKid = {},
+}) {
   const {
-    nombre,
-    apellidos,
-    fechaNacimiento,
-    edad,
-    alergias = [],
-    contactoEmergencia,
-    aula = {}
+    nombre = '',
+    apellidos = '',
+    fechaNacimiento = '',
+    edad = '',
+    alergias = '',
+    contactoEmergencia = '',
+    aula = ''
   } = selectKid
 
   const alerg = alergias ? alergias.join(' ') : 'Ninguna'
+
   return (
     <>
       <Modal show={openModal} onClose={handleModal}>
@@ -25,96 +30,72 @@ export default function ModalEdit ({ openModal, handleModal, selectKid }) {
           <div className='flex max-w-md flex-col gap-2'>
             <Label htmlFor='disabledInput1'>Nombre</Label>
             <TextInput
-              disabled
-              id='disabledInput1'
-              placeholder='Disabled input'
+              placeholder='Nombre'
               type='text'
               value={nombre}
             />
             <Label htmlFor='disabledInput2'>Apellido</Label>
             <TextInput
-              disabled
-              id='disabledInput2'
               placeholder='Disabled readonly input'
-              readOnly
               type='text'
-              value={apellidos}
+              value={apellidos ?? ''}
             />
             <Label htmlFor='disabledInput2'>Fecha de nacimiento </Label>
             <TextInput
-              disabled
-              id='disabledInput2'
               placeholder='Disabled readonly input'
-              readOnly
               type='text'
-              value={fechaNacimiento}
+              value={fechaNacimiento ?? ''}
             />
             <Label htmlFor='disabledInput2'>
               Aula
               <TextInput
-                disabled
-                id='disabledInput2'
                 placeholder='Disabled readonly input'
-                readOnly
                 type='text'
-                value={aula}
+                value={aula ?? ''}
               />
             </Label>
           </div>
           <div className='flex max-w-md flex-col gap-2'>
             <Label htmlFor='disabledInput2'>Edad</Label>
             <TextInput
-              disabled
-              id='disabledInput2'
               placeholder='Disabled readonly input'
-              readOnly
               type='text'
               value={edad}
             />
             <Label htmlFor='disabledInput2'>Alerjias</Label>
             <TextInput
-              disabled
-              id='disabledInput2'
               placeholder='Disabled readonly input'
-              readOnly
               type='text'
-              // eslint-disable-next-line react/prop-types
-              value={alerg}
+              value={alerg ?? ''}
             />
             <aside className=' flex flex-col justify-end mt-2 '>
-              <h1 className='font-bold '>Contacto Emergencia</h1>
+              <h1 className='font-bold dark:text-white/90'>
+                Contacto Emergencia
+              </h1>
               <div className='grid grid-cols-2 gap-x-2 '>
                 <Label htmlFor='disabledInput2'>
                   Nombre
                   <TextInput
-                    disabled
-                    id='disabledInput2'
                     placeholder='Disabled readonly input'
-                    readOnly
                     type='text'
-                    value={contactoEmergencia.nombre}
+                    value={contactoEmergencia.nombre ?? ''}
                   />
                 </Label>
                 <Label htmlFor='disabledInput2'>
                   Parentesco
                   <TextInput
-                    disabled
-                    id='disabledInput2'
                     placeholder='Disabled readonly input'
-                    readOnly
                     type='text'
-                    value={contactoEmergencia.parentesco}
+                    value={contactoEmergencia.parentesco ?? ''}
                   />
                 </Label>
                 <Label htmlFor='disabledInput2' className='col-span-2'>
                   Telefono
                   <TextInput
-                    disabled
-                    id='disabledInput2'
                     placeholder='Disabled readonly input'
                     readOnly
                     type='text'
-                    value={contactoEmergencia.telefono}
+                    value={contactoEmergencia.telefono ?? ''}
                   />
                 </Label>
               </div>

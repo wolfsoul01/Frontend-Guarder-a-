@@ -3,7 +3,8 @@ import { Delet, Edit, More } from '../../Icons'
 import ModalEdit from './ModalEdit'
 import { useState } from 'react'
 import ModalShow from './ModalShow'
-
+import { ButtonDef } from '../../ui'
+import ModalCreate from './ModalCrate'
 const info = [
   {
     id: 1,
@@ -166,27 +167,46 @@ const info = [
   }
 ]
 export function ChildrentDash () {
-  const [openModal, setopenModal] = useState(false)
-  const [openModalEdit, setModal] = useState(false)
+  const [openModalEdit, setModalEdit] = useState(false)
+  const [openModalShow, setModalShow] = useState(false)
+  const [openModalCreate, setModalCreate] = useState(false)
 
-  const [selectKid, setKid] = useState()
+  const [kids, setKids] = useState(info)
+
+  const [selectKid, setSelectKid] = useState()
 
   return (
     <section className=' overflow-x-auto mt-4'>
-      {openModal && (
-        <ModalEdit
-          handleModal={() => setopenModal(false)}
-          selectKid={selectKid}
-          openModal={openModal}
-        />
-      )}
+      <header>
+        <ButtonDef handleclick={() => setModalCreate(true)}>Add</ButtonDef>
+      </header>
+
+      {/* Modales  */}
       {openModalEdit && (
-        <ModalShow
-          handleModal={() => setModal(false)}
+        <ModalEdit
+          handleModal={() => setModalEdit(false)}
           selectKid={selectKid}
           openModal={openModalEdit}
         />
       )}
+      {openModalCreate && (
+        <ModalCreate
+          handleModal={() => setModalCreate(false)}
+          selectKid={selectKid}
+          openModal={openModalCreate}
+          setKids={setKids}
+          kids={kids}
+        />
+      )}
+      {openModalShow && (
+        <ModalShow
+          handleModal={() => setModalShow(false)}
+          selectKid={selectKid}
+          openModal={openModalShow}
+        />
+      )}
+      {/* Modales  */}
+
       <Table className=''>
         <Table.Head>
           <Table.HeadCell>Nombre</Table.HeadCell>
@@ -198,7 +218,7 @@ export function ChildrentDash () {
           <Table.HeadCell>More..</Table.HeadCell>
         </Table.Head>
         <Table.Body className='divide-y'>
-          {info.map((kid, i) => {
+          {kids.map((kid, i) => {
             return (
               <Table.Row
                 key={kid.id}
@@ -223,17 +243,20 @@ export function ChildrentDash () {
                   </span>
                 </Table.Cell>
                 <Table.Cell className='flex gap-5'>
-                  <button className='cursor-pointer' onClick={()=>{
-                    setKid(kid)
-                    setModal(true)
-                  }}>
+                  <button
+                    className='cursor-pointer'
+                    onClick={() => {
+                      setSelectKid(kid)
+                      setModalShow(true)
+                    }}
+                  >
                     <More />
                   </button>
                   <button
                     className='cursor-pointer'
                     onClick={() => {
-                      setKid(kid)
-                      setopenModal(true)
+                      setSelectKid(kid)
+                      setModalEdit(true)
                     }}
                   >
                     <Edit />
@@ -249,103 +272,4 @@ export function ChildrentDash () {
       </Table>
     </section>
   )
-}
-
-{
-  /*  <Table.Row className='bg-white dark:border-gray-700 dark:bg-gray-800'>
-            <Table.Cell className='whitespace-nowrap font-medium text-gray-900 dark:text-white'>
-              Juanito
-            </Table.Cell>
-            <Table.Cell>Juares</Table.Cell>
-            <Table.Cell>2</Table.Cell>
-            <Table.Cell>1A</Table.Cell>
-            <Table.Cell>10/10/23</Table.Cell>
-            <Table.Cell>
-              <a className='font-medium text-cyan-600 hover:underline dark:text-cyan-500'>
-                <p>Edit</p>
-              </a>
-            </Table.Cell>
-            <Table.Cell>
-              <a className='font-medium text-cyan-600 hover:underline dark:text-cyan-500'>
-                <p>Delet</p>
-              </a>
-            </Table.Cell>
-            <Table.Cell>
-              <a className='font-medium text-cyan-600 hover:underline dark:text-cyan-500'>
-                <p>More</p>
-              </a>
-            </Table.Cell>
-          </Table.Row>
-          <Table.Row className='bg-white dark:border-gray-700 dark:bg-gray-800'>
-            <Table.Cell className='whitespace-nowrap font-medium text-gray-900 dark:text-white'>
-              Juanito
-            </Table.Cell>
-            <Table.Cell>Juares</Table.Cell>
-            <Table.Cell>2</Table.Cell>
-            <Table.Cell>1A</Table.Cell>
-            <Table.Cell>10/10/23</Table.Cell>
-            <Table.Cell>
-              <a className='font-medium text-cyan-600 hover:underline dark:text-cyan-500'>
-                <p>Edit</p>
-              </a>
-            </Table.Cell>
-            <Table.Cell>
-              <a className='font-medium text-cyan-600 hover:underline dark:text-cyan-500'>
-                <p>Delet</p>
-              </a>
-            </Table.Cell>
-            <Table.Cell>
-              <a className='font-medium text-cyan-600 hover:underline dark:text-cyan-500'>
-                <p>More</p>
-              </a>
-            </Table.Cell>
-          </Table.Row>
-          <Table.Row className='bg-white dark:border-gray-700 dark:bg-gray-800'>
-            <Table.Cell className='whitespace-nowrap font-medium text-gray-900 dark:text-white'>
-              Juanito
-            </Table.Cell>
-            <Table.Cell>Juares</Table.Cell>
-            <Table.Cell>2</Table.Cell>
-            <Table.Cell>1A</Table.Cell>
-            <Table.Cell>10/10/23</Table.Cell>
-            <Table.Cell>
-              <a className='font-medium text-cyan-600 hover:underline dark:text-cyan-500'>
-                <p>Edit</p>
-              </a>
-            </Table.Cell>
-            <Table.Cell>
-              <a className='font-medium text-cyan-600 hover:underline dark:text-cyan-500'>
-                <p>Delet</p>
-              </a>
-            </Table.Cell>
-            <Table.Cell>
-              <a className='font-medium text-cyan-600 hover:underline dark:text-cyan-500'>
-                <p>More</p>
-              </a>
-            </Table.Cell>
-          </Table.Row>
-          <Table.Row className='bg-white dark:border-gray-700 dark:bg-gray-800'>
-            <Table.Cell className='whitespace-nowrap font-medium text-gray-900 dark:text-white'>
-              Juanito
-            </Table.Cell>
-            <Table.Cell>Juares</Table.Cell>
-            <Table.Cell>2</Table.Cell>
-            <Table.Cell>1A</Table.Cell>
-            <Table.Cell>10/10/23</Table.Cell>
-            <Table.Cell>
-              <a className='font-medium text-cyan-600 hover:underline dark:text-cyan-500'>
-                <p>Edit</p>
-              </a>
-            </Table.Cell>
-            <Table.Cell>
-              <a className='font-medium text-cyan-600 hover:underline dark:text-cyan-500'>
-                <p>Delet</p>
-              </a>
-            </Table.Cell>
-            <Table.Cell>
-              <a className='font-medium text-cyan-600 hover:underline dark:text-cyan-500'>
-                <p>More</p>
-              </a>
-            </Table.Cell>
-          </Table.Row>*/
 }
