@@ -5,6 +5,7 @@ import { useState } from 'react'
 import ModalShow from './ModalShow'
 import { ButtonDef } from '../../ui'
 import ModalCreate from './ModalCrate'
+import { Navigate } from './Navigate'
 const info = [
   {
     id: 1,
@@ -177,7 +178,7 @@ export function ChildrentDash () {
 
   return (
     <section className=' overflow-x-auto mt-4'>
-      <header>
+      <header className='my-2'>
         <ButtonDef handleclick={() => setModalCreate(true)}>Add</ButtonDef>
       </header>
 
@@ -226,7 +227,7 @@ export function ChildrentDash () {
                   i % 2 === 0
                     ? 'bg-slate-600 text-white'
                     : 'bg-slate-200 text-black'
-                }`}
+                } hover:shadow-sm-light `}
               >
                 <Table.Cell>{kid.nombre}</Table.Cell>
                 <Table.Cell>{kid.apellidos}</Table.Cell>
@@ -270,6 +271,7 @@ export function ChildrentDash () {
           })}
         </Table.Body>
       </Table>
+    <Navigate/>
     </section>
   )
 }
