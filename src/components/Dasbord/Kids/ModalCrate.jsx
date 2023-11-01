@@ -16,7 +16,7 @@ export default function ModalCreate ({ openModal, handleModal, setKids, kids }) 
       edad: info.edad,
       aula: info.aula,
       estado: true,
-      alergias: info.alergias,
+      alergias: info.alergias.split(','),
       contactoEmergencia: {
         nombre: info.contactoSOS,
         telefono: info.contactoTelefono,
@@ -60,13 +60,20 @@ export default function ModalCreate ({ openModal, handleModal, setKids, kids }) 
                 required
               />
               <Label htmlFor='aulaInput'>Aula</Label>
+
               <TextInput
                 placeholder='Ingresa el aula'
                 type='text'
                 id='aulaInput'
                 name='aula'
                 required
+                list='opciones'
               />
+      <datalist id="opciones">
+        <option value="Opción 1" />
+        <option value="Opción 2" />
+        <option value="Opción 3" />
+      </datalist>
             </div>
             <div className='flex max-w-md flex-col gap-2'>
               <Label htmlFor='edadInput'>Edad</Label>
@@ -83,6 +90,7 @@ export default function ModalCreate ({ openModal, handleModal, setKids, kids }) 
                 type='text'
                 id='alergiasInput'
                 name='alergias'
+                title='Separe las alejrgias con ,'
               />
               <aside className='flex flex-col justify-end mt-2'>
                 <h1 className='font-bold dark:text-white/90'>
