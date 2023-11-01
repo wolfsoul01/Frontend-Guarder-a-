@@ -1,12 +1,19 @@
+import { useState } from 'react'
 import { AsideBar } from './SideBar/Aside'
 import { Nav } from './SideBar/Nav'
 
 function Sidebar () {
+  const [isOpen, setisOpne] = useState(false)
+
+  function handleClick () {
+    setisOpne(!isOpen)
+  }
+
   return (
     <>
-      <Nav></Nav>
+      <Nav handleClick={handleClick}></Nav>
 
-      <AsideBar></AsideBar>
+      <AsideBar isOpen={isOpen}></AsideBar>
     </>
   )
 }
