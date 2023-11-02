@@ -11,9 +11,7 @@ function Dashbord () {
             <Sidebar />
           </header>
 
-          <main className=' h-full sm:ml-52  p-5 mt-16  bg-slate-300 '>
-            
-            
+          <main className='maxws h-full sm:ml-52  p-5 mt-16  bg-slate-300 '>
             <Outlet />
           </main>
         </Flowbite>

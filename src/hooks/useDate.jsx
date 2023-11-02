@@ -204,6 +204,23 @@ const empleados = [
     sueldo: 220,
     aula:'verde',
     edad:30
+  },{
+    id: 2,
+    nombre: 'Luis',
+    apellidos: 'Gómez',
+    fechaContratacion: '2015-03-15',
+    sueldo: 150,
+    aula:'roja',
+    edad:50
+  },
+  {
+    id: 2,
+    nombre: 'Luis',
+    apellidos: 'Gómez',
+    fechaContratacion: '2015-03-15',
+    sueldo: 150,
+    aula:'roja',
+    edad:50
   }
   // más empleados...
 ]

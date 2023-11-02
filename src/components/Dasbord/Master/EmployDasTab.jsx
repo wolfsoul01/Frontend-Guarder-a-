@@ -83,13 +83,13 @@ export function EmployDasTab ({ info }) {
             Sala
           </Table.HeadCell>
           <Table.HeadCell className='bg-zinc-500 text-white'>
-            Fecha de Contratacion{' '}
+            Fecha de Contra
           </Table.HeadCell>
           <Table.HeadCell className='bg-zinc-500 text-white'>
             Sueldo
           </Table.HeadCell>
           <Table.HeadCell className='bg-zinc-500 text-white'>
-            Status{' '}
+            Status
           </Table.HeadCell>
           <Table.HeadCell className='bg-zinc-500 text-white'>
             More..
