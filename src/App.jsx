@@ -13,7 +13,7 @@ function App () {
         <Route path='/' element={<Home />} />
 
         <Route path='/dashbord' element={<Dashbord />}>
-          <Route path='' element={<DashElemet Component={KidsDashTab} />} />
+          <Route path='kids' element={<DashElemet Component={KidsDashTab} />} />
           <Route
             path='employ'
             element={<DashElemet Component={EmployDasTab} />}

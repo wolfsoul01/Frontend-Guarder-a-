@@ -1,7 +1,7 @@
 export function useDate (pathname) {
   const path = getEnpoint(pathname)
 
-  if (path === 'dashbord') {
+  if (path === 'kids') {
     return kids
   } else if (path === 'employ') {
     return empleados
