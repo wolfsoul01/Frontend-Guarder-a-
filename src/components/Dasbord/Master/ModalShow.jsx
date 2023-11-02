@@ -4,17 +4,16 @@ import { Button, Modal } from 'flowbite-react'
 import { Label, TextInput } from 'flowbite-react'
 
 // eslint-disable-next-line react/prop-types
-export default function ModalShow ({ openModal, handleModal, selectKid }) {
+export default function ModalShow ({ openModal, handleModal, selectEmploy }) {
   // eslint-disable-next-line react/prop-types
   const {
     nombre,
     apellidos,
-    fechaNacimiento,
+    fechaContratacion,
     edad,
-    alergias = [],
-    contactoEmergencia,
-    aula = {}
-  } = selectKid
+    aula ,
+    sueldo  
+  } = selectEmploy
 
   return (
     <>

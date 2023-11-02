@@ -2,7 +2,7 @@
 import { Button, Modal } from 'flowbite-react'
 import { Label, TextInput } from 'flowbite-react'
 
-export default function ModalCreate ({ openModal, handleModal, setKids, kids }) {
+export default function ModalCreate ({ openModal, handleModal, setEmploy, employ }) {
   function handleCreate (e) {
     e.preventDefault()
 
@@ -12,19 +12,13 @@ export default function ModalCreate ({ openModal, handleModal, setKids, kids }) 
       id: new Date(),
       nombre: info.name,
       apellidos: info.apellido,
-      fechaNacimiento: info.fechaNacimiento,
+      fechaContratacion: info.fechaContratacion,
       edad: info.edad,
       aula: info.aula,
-      estado: true,
-      alergias: info.alergias.split(','),
-      contactoEmergencia: {
-        nombre: info.contactoSOS,
-        telefono: info.contactoTelefono,
-        parentesco: info.contactoParentesco
-      }
+      sueldo:info.sueldo
     }
 
-    setKids([...kids, newKid])
+    setEmploy([...employ, newKid])
     handleModal()
   }
 
@@ -51,12 +45,12 @@ export default function ModalCreate ({ openModal, handleModal, setKids, kids }) 
                 required
                 name='apellido'
               />
-              <Label htmlFor='fechaNacimientoInput'>Fecha de nacimiento</Label>
+              <Label htmlFor='fechaNacimientoInput'>Fecha de Contatacion</Label>
               <TextInput
                 placeholder='Ingresa la fecha de nacimiento'
                 type='date'
                 id='fechaNacimientoInput'
-                name='fechaNacimiento'
+                name='fechaContratacion'
                 required
               />
               <Label htmlFor='aulaInput'>Aula</Label>
@@ -84,51 +78,15 @@ export default function ModalCreate ({ openModal, handleModal, setKids, kids }) 
                 name='edad'
                 required
               />
-              <Label htmlFor='alergiasInput'>Alergias</Label>
-              <TextInput
-                placeholder='Ingresa las alergias'
-                type='text'
-                id='alergiasInput'
-                name='alergias'
-                title='Separe las alejrgias con ,'
-              />
-              <aside className='flex flex-col justify-end mt-2'>
-                <h1 className='font-bold dark:text-white/90'>
-                  Contacto Emergencia
-                </h1>
-                <div className='grid grid-cols-2 gap-x-2'>
-                  <Label htmlFor='contactoNombreInput'>
-                    Nombre
-                    <TextInput
-                      placeholder='Ingresa el nombre del contacto de emergencia'
-                      type='text'
-                      id='contactoNombreInput'
-                      name='contactoSOS'
-                      required
-                    />
-                  </Label>
-                  <Label htmlFor='contactoParentescoInput'>
-                    Parentesco
-                    <TextInput
-                      placeholder='Ingresa el parentesco del contacto de emergencia'
-                      type='text'
-                      id='contactoParentescoInput'
-                      required
-                      name='contactoParentesco'
-                    />
-                  </Label>
-                  <Label htmlFor='contactoTelefonoInput' className='col-span-2'>
-                    Telefono
-                    <TextInput
-                      placeholder='Ingresa el teléfono del contacto de emergencia'
-                      type='number'
-                      id='contactoTelefonoInput'
-                      required
-                      name='contactoTelefono'
-                    />
-                  </Label>
-                </div>
-              </aside>
+            <Label htmlFor='disabledInput2'>Sueldo</Label>
+            <TextInput
+              placeholder='Ingrese el sueldo '
+              type='text'
+              defaultValue={''}
+              name='sueldo'
+              required
+            />
+             
             </div>
           </Modal.Body>
           <Modal.Footer>

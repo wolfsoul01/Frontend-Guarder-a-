@@ -8,19 +8,17 @@ import { Label, TextInput } from 'flowbite-react'
 export default function ModalEdit ({
   openModal,
   handleModal,
-  selectKid = {},
+  selectEmploy = {},
 }) {
   const {
     nombre = '',
     apellidos = '',
-    fechaNacimiento = '',
+    fechaContratacion = '',
     edad = '',
-    alergias = '',
-    contactoEmergencia = '',
-    aula = ''
-  } = selectKid
+    aula='' ,
+    sueldo=''
+  } = selectEmploy
 
-  const alerg = alergias ? alergias.join(' ') : 'Ninguna'
 
   return (
     <>
@@ -33,18 +31,21 @@ export default function ModalEdit ({
               placeholder='Nombre'
               type='text'
               value={nombre}
+              defaultValue={''}
             />
             <Label htmlFor='disabledInput2'>Apellido</Label>
             <TextInput
               placeholder='Disabled readonly input'
               type='text'
               value={apellidos ?? ''}
+              defaultValue={''}
             />
-            <Label htmlFor='disabledInput2'>Fecha de nacimiento </Label>
+            <Label htmlFor='disabledInput2'>Fecha de Contratacion </Label>
             <TextInput
               placeholder='Disabled readonly input'
-              type='text'
-              value={fechaNacimiento ?? ''}
+              type='date'
+              value={fechaContratacion ?? ''}
+              defaultValue={''}
             />
             <Label htmlFor='disabledInput2'>
               Aula
@@ -52,6 +53,7 @@ export default function ModalEdit ({
                 placeholder='Disabled readonly input'
                 type='text'
                 value={aula ?? ''}
+                defaultValue={''}
               />
             </Label>
           </div>
@@ -61,45 +63,16 @@ export default function ModalEdit ({
               placeholder='Disabled readonly input'
               type='text'
               value={edad}
+              defaultValue={''}
             />
-            <Label htmlFor='disabledInput2'>Alerjias</Label>
+            <Label htmlFor='disabledInput2'>Sueldo</Label>
             <TextInput
               placeholder='Disabled readonly input'
               type='text'
-              value={alerg ?? ''}
+              value={sueldo}
+              defaultValue={''}
             />
-            <aside className=' flex flex-col justify-end mt-2 '>
-              <h1 className='font-bold dark:text-white/90'>
-                Contacto Emergencia
-              </h1>
-              <div className='grid grid-cols-2 gap-x-2 '>
-                <Label htmlFor='disabledInput2'>
-                  Nombre
-                  <TextInput
-                    placeholder='Disabled readonly input'
-                    type='text'
-                    value={contactoEmergencia.nombre ?? ''}
-                  />
-                </Label>
-                <Label htmlFor='disabledInput2'>
-                  Parentesco
-                  <TextInput
-                    placeholder='Disabled readonly input'
-                    type='text'
-                    value={contactoEmergencia.parentesco ?? ''}
-                  />
-                </Label>
-                <Label htmlFor='disabledInput2' className='col-span-2'>
-                  Telefono
-                  <TextInput
-                    placeholder='Disabled readonly input'
-                    readOnly
-                    type='text'
-                    value={contactoEmergencia.telefono ?? ''}
-                  />
-                </Label>
-              </div>
-            </aside>
+           
           </div>
         </Modal.Body>
         <Modal.Footer>

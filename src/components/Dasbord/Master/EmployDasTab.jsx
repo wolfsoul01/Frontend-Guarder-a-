@@ -14,7 +14,7 @@ export function EmployDasTab ({ info }) {
   const [openModalCreate, setModalCreate] = useState(false)
 
   const [employ, setEmploy] = useState(info)
-  const [selectKid, setSelectKid] = useState()
+  const [selectEmploy, setSelectEmploy] = useState()
 
   return (
     <section className=' overflow-x-auto mt-4'>
@@ -46,23 +46,23 @@ export function EmployDasTab ({ info }) {
       {openModalEdit && (
         <ModalEdit
           handleModal={() => setModalEdit(false)}
-          selectKid={selectKid}
+          selectEmploy={selectEmploy}
           openModal={openModalEdit}
         />
       )}
       {openModalCreate && (
         <ModalCreate
           handleModal={() => setModalCreate(false)}
-          selectKid={selectKid}
+          selectEmploy={selectEmploy}
           openModal={openModalCreate}
-          setemploy={setEmploy}
+          setEmploy={setEmploy}
           employ={employ}
         />
       )}
       {openModalShow && (
         <ModalShow
           handleModal={() => setModalShow(false)}
-          selectKid={selectKid}
+          selectEmploy={selectEmploy}
           openModal={openModalShow}
         />
       )}
@@ -123,7 +123,7 @@ export function EmployDasTab ({ info }) {
                   <button
                     className='cursor-pointer'
                     onClick={() => {
-                      setSelectKid(kid)
+                      setSelectEmploy(kid)
                       setModalShow(true)
                     }}
                   >
@@ -132,7 +132,7 @@ export function EmployDasTab ({ info }) {
                   <button
                     className='cursor-pointer'
                     onClick={() => {
-                      setSelectKid(kid)
+                      setSelectEmploy(kid)
                       setModalEdit(true)
                     }}
                   >
