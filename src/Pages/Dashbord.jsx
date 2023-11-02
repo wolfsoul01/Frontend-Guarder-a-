@@ -7,12 +7,15 @@ function Dashbord () {
     <>
       <div className=''>
         <Flowbite>
-          {/* <Navbar /> */}
-          <Sidebar />
+          <header>
+            <Sidebar />
+          </header>
 
-          <div className='w-full h-full'>
+          <main className=' h-full sm:ml-52  p-5 mt-16  bg-slate-300 '>
+            
+            
             <Outlet />
-          </div>
+          </main>
         </Flowbite>
       </div>
     </>
