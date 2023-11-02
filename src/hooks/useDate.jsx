@@ -6,6 +6,9 @@ export function useDate (pathname) {
   } else if (path === 'employ') {
     return empleados
   }
+  else if(path ==='father'){
+    return ninosYpadres
+  }
 }
 
 function getEnpoint (pathname) {
@@ -224,3 +227,86 @@ const empleados = [
   }
   // más empleados...
 ]
+
+const padres = [
+  {
+    id: 1,
+    nombre: 'Maria Gómez',
+    telefono: '5544332211',
+    parentesco: 'madre'
+  },
+  {
+    id: 2,
+    nombre: 'Pedro Hernández',
+    telefono: '5543215678',
+    parentesco: 'padre'
+  },
+  {
+    id: 3,
+    nombre: 'Clara Sánchez',
+    telefono: '5587452136',
+    parentesco: 'madre'
+  },
+  {
+    id: 4,
+    nombre: 'Alberto Martínez',
+    telefono: '5566543219',
+    parentesco: 'padre'
+  },
+  {
+    id: 5,
+    nombre: 'Elisa Díaz',
+    telefono: '5544332211',
+    parentesco: 'madre'
+  },
+  {
+    id: 6,
+    nombre: 'Roberto González',
+    telefono: '5559871265',
+    parentesco: 'padre'
+  },
+  {
+    id: 7,
+    nombre: 'Jimena Ruíz',
+    telefono: '5587452136',
+    parentesco: 'madre'
+  },
+  {
+    id: 8,
+    nombre: 'Alan Soto',
+    telefono: '5544332211',
+    parentesco: 'padre'
+  },
+  {
+    id: 9,
+    nombre: 'Patricia Reyes',
+    telefono: '5556633225',
+    parentesco: 'madre'
+  },
+  {
+    id: 10,
+    nombre: 'Enrique Luna',
+    telefono: '5532165498',
+    parentesco: 'padre'
+  }
+];
+
+// Combina la información de los niños y sus padres en una sola lista
+const ninosYpadres = kids.map((nino) => {
+  const padre = padres.find((p) => p.id === nino.id);
+  return {
+    id: nino.id,
+    nombreNino: nino.nombre,
+    apellidosNino: nino.apellidos,
+    fechaNacimientoNino: nino.fechaNacimiento,
+    edadNino: nino.edad,
+    aulaNino: nino.aula,
+    estadoNino: nino.estado,
+    alergiasNino: nino.alergias,
+    contactoEmergenciaNino: nino.contactoEmergencia,
+    nombrePadre: padre ? padre.nombre : '',
+    telefonoPadre: padre ? padre.telefono : '',
+    parentescoPadre: padre ? padre.parentesco : ''
+  };
+});
+
