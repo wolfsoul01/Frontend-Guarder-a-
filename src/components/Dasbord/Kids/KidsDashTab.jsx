@@ -8,7 +8,7 @@ import ModalCreate from './ModalCrate'
 import { Navigate } from './Navigate'
 
 // eslint-disable-next-line react/prop-types
-export function KidsDashTab ({info}) {
+export function KidsDashTab ({ info }) {
   const [openModalEdit, setModalEdit] = useState(false)
   const [openModalShow, setModalShow] = useState(false)
   const [openModalCreate, setModalCreate] = useState(false)
@@ -16,7 +16,6 @@ export function KidsDashTab ({info}) {
   const [kids, setKids] = useState(info)
   const [selectKid, setSelectKid] = useState()
 
- 
 
   return (
     <section className=' overflow-x-auto mt-4'>
@@ -24,13 +23,20 @@ export function KidsDashTab ({info}) {
         <h2>Todos los usuarios </h2>
 
         <div className=' flex items-center gap-2'>
-        <input type="text" name="search" id="users-search" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  focus:border-slate-500 block  p-2.5 w-1/2" placeholder="Search for users" onChange={null}/>
+          <input
+            type='text'
+            name='search'
+            id='users-search'
+            className='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  focus:border-slate-500 block  p-2.5 w-1/2'
+            placeholder='Search for users'
+            onChange={null}
+          />
 
           <aside className='flex gap-2 border-l border-gray-400 py-2 px-3'>
-           <button className='flex ' onClick={()=>setModalCreate(true)}>
-              <Add/>
+            <button className='flex ' onClick={() => setModalCreate(true)}>
+              <Add />
               Add User
-           </button>
+            </button>
           </aside>
         </div>
       </header>
@@ -72,7 +78,7 @@ export function KidsDashTab ({info}) {
           <Table.HeadCell className='bg-zinc-500 text-white'>More..</Table.HeadCell>
         </Table.Head>
         <Table.Body className=''>
-          {kids.map((kid, i) => {
+        {kids.map((kid, i) => {
             return (
               <Table.Row
                 key={kid.id}
@@ -128,3 +134,4 @@ export function KidsDashTab ({info}) {
     </section>
   )
 }
+

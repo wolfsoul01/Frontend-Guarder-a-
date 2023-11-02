@@ -8,23 +8,13 @@ import ModalCreate from './ModalCrate'
 import { Navigate } from './Navigate'
 
 // eslint-disable-next-line react/prop-types
-export function KidsDashTab ({info}) {
+export function EmployDasTab ({ info }) {
   const [openModalEdit, setModalEdit] = useState(false)
   const [openModalShow, setModalShow] = useState(false)
   const [openModalCreate, setModalCreate] = useState(false)
 
-  const [kids, setKids] = useState(info)
+  const [employ, setEmploy] = useState(info)
   const [selectKid, setSelectKid] = useState()
-
-  const [search,setSearch ]= useState()
-
-
-  const handleSearch=(e)=>{
-    // setSearch(e.target.value);
-
-    // const fil = kids.filter(kid=> kid.nombre.includes(search) )
-    // setKids(fil)
-  }
 
   return (
     <section className=' overflow-x-auto mt-4'>
@@ -32,19 +22,23 @@ export function KidsDashTab ({info}) {
         <h2>Todos los usuarios </h2>
 
         <div className=' flex items-center gap-2'>
-        <input type="text" name="search" id="users-search" className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  focus:border-slate-500 block  p-2.5 w-1/2" placeholder="Search for users" onChange={handleSearch}/>
+          <input
+            type='text'
+            name='search'
+            id='users-search'
+            className='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  focus:border-slate-500 block  p-2.5 w-1/2'
+            placeholder='Search for users'
+            onChange={null}
+          />
 
           <aside className='flex gap-2 border-l border-gray-400 py-2 px-3'>
-           <button className='flex ' onClick={()=>setModalCreate(true)}>
-              <Add/>
+            <button className='flex ' onClick={() => setModalCreate(true)}>
+              <Add />
               Add User
-           </button>
-            
+            </button>
           </aside>
 
-          <div>
-        
-          </div>
+          <div></div>
         </div>
       </header>
 
@@ -61,8 +55,8 @@ export function KidsDashTab ({info}) {
           handleModal={() => setModalCreate(false)}
           selectKid={selectKid}
           openModal={openModalCreate}
-          setKids={setKids}
-          kids={kids}
+          setemploy={setEmploy}
+          employ={employ}
         />
       )}
       {openModalShow && (
@@ -76,30 +70,46 @@ export function KidsDashTab ({info}) {
 
       <Table className='shadow-lg'>
         <Table.Head className=' [&>div]:bg-black'>
-          <Table.HeadCell className='bg-zinc-500 text-white'>Nombre</Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>Apellido</Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>Edad</Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>Sala</Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>Fecha de ingreso</Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>Status</Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>More..</Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>
+            Nombre
+          </Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>
+            Apellido
+          </Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>
+            Edad
+          </Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>
+            Sala
+          </Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>
+            Fecha de Contratacion{' '}
+          </Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>
+            Sueldo
+          </Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>
+            Status{' '}
+          </Table.HeadCell>
+          <Table.HeadCell className='bg-zinc-500 text-white'>
+            More..
+          </Table.HeadCell>
         </Table.Head>
         <Table.Body className=''>
-          {kids.map((kid, i) => {
+          {employ.map((kid, i) => {
             return (
               <Table.Row
                 key={kid.id}
                 className={`${
-                  i % 2 === 0
-                    ? 'bg-gray-700 text-white'
-                    : 'text-black'
+                  i % 2 === 0 ? 'bg-gray-700 text-white' : 'text-black'
                 } hover: `}
               >
                 <Table.Cell>{kid.nombre}</Table.Cell>
                 <Table.Cell>{kid.apellidos}</Table.Cell>
                 <Table.Cell>{kid.edad}</Table.Cell>
                 <Table.Cell>{kid.aula}</Table.Cell>
-                <Table.Cell>{kid.fechaNacimiento}</Table.Cell>
+                <Table.Cell>{kid.fechaContratacion}</Table.Cell>
+                <Table.Cell>{kid.sueldo}$</Table.Cell>
                 <Table.Cell>
                   <span
                     className={`${

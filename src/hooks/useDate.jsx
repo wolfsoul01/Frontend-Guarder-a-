@@ -13,6 +13,7 @@ function getEnpoint (pathname) {
   return url
 }
 
+
 const kids = [
   {
     id: 1,
@@ -181,7 +182,7 @@ const empleados = [
     nombre: 'Ana',
     apellidos: 'Pérez',
     fechaContratacion: '2010-05-02',
-    sueldo: 25000,
+    sueldo: 250,
     aula:'azul',
     edad:40
     
@@ -191,7 +192,7 @@ const empleados = [
     nombre: 'Luis',
     apellidos: 'Gómez',
     fechaContratacion: '2015-03-15',
-    sueldo: 15000,
+    sueldo: 150,
     aula:'roja',
     edad:50
   },
@@ -200,7 +201,7 @@ const empleados = [
     nombre: 'Clara',
     apellidos: 'López',
     fechaContratacion: '2018-01-05',
-    sueldo: 22000,
+    sueldo: 220,
     aula:'verde',
     edad:30
   }
