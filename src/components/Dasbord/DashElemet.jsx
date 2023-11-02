@@ -1,6 +1,11 @@
+import { useLocation } from 'react-router-dom'
+import { useDate } from '../../hooks/useDate'
 
 // eslint-disable-next-line react/prop-types
-export function DashElemet ({ info, Component }) {
+export function DashElemet ({ Component }) {
+  const { pathname } = useLocation()
+  const info = useDate(pathname)
+
   return (
     <>
       <section>
