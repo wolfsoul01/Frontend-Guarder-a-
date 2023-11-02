@@ -15,12 +15,19 @@ export default function ModalShow ({ openModal, handleModal, selectEmploy }) {
     sueldo  
   } = selectEmploy
 
+  const campos = Object.keys(selectEmploy)
+  
+
   return (
     <>
       <Modal show={openModal} onClose={handleModal}>
         <Modal.Header>More Info </Modal.Header>
         <Modal.Body className='grid grid-cols-2 gap-x-3'>
-            <h1>{nombre}</h1>
+            <ul>
+              {campos.map(ele=>{
+                return  <li key={nombre} className='text-xl font-semibold my-1'>{ele}:{selectEmploy[ele]}</li>
+              })}
+            </ul>
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={handleModal}>Aceptar </Button>
