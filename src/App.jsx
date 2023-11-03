@@ -6,6 +6,7 @@ import { DashElemet } from './components/Dasbord/DashElemet'
 import { KidsDashTab } from './components/Dasbord/Kids/KidsDashTab'
 import { EmployDasTab } from './components/Dasbord/Master/EmployDasTab'
 import { FatherDasTab } from './components/Dasbord/Fathers/FatherDasTab'
+import { ErrorPage } from './Pages/404'
 
 function App () {
   return (
@@ -28,7 +29,7 @@ function App () {
         </Route>
         <Route path='/login' element={<Login />} />
 
-        <Route path='*' element={<div>404</div>} />
+        <Route path='*' element={<ErrorPage/>} />
       </Routes>
     </>
   )

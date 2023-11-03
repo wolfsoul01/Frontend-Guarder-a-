@@ -6,9 +6,7 @@ import { Button, Modal } from 'flowbite-react'
 export default function ModalShow ({ openModal, handleModal, selection }) {
   // eslint-disable-next-line react/prop-types
  
-console.log(selection);
   const campos = Object.keys(selection)
-  console.log(campos);
   
 
   return (
