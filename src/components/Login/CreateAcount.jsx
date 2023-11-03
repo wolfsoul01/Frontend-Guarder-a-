@@ -1,7 +1,7 @@
 // eslint-disable-next-line react/prop-types
 export function CreateForm ({ hancleClik }) {
   return (
-    <div className='w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24'>
+    <div className='w-full px-4 py-10 sm:px-6 sm:py-12 lg:w-1/2 lg:px-8 lg:py-16'>
       <div className='mx-auto max-w-lg text-center relative'>
         <h1 className='text-2xl font-bold sm:text-3xl'>Crear Cuenta </h1>
 
@@ -132,8 +132,6 @@ export function CreateForm ({ hancleClik }) {
           <div className='relative'>
             <input
               type='text'
-              id='hs-trailing-icon'
-              name='hs-trailing-icon'
               className='py-3 px-4 pr-11 block w-full border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400'
               placeholder='xxxx-xxxx-xxxx-xxxx'
             />
