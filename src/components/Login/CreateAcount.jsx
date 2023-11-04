@@ -1,3 +1,5 @@
+import {ArrowRigth} from '../Icons'
+
 // eslint-disable-next-line react/prop-types
 export function CreateForm ({ hancleClik }) {
   return (
@@ -16,8 +18,9 @@ export function CreateForm ({ hancleClik }) {
           través del juego y la imaginación. Inicia sesión para formar parte de
           nuestra comunidad educativa.
         </p>
-        <button className=' block text-center w-full' onClick={hancleClik}>
-          Create Acount{' '}
+        <button className=' text-center w-1/2 mx-auto class="w-[150px] bg-black h-[50px] my-3 flex items-center justify-center gap-1 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-yellow-200 before:to-amber-500 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff] hover:text-black font-semibold' onClick={hancleClik}>
+          Create Acount
+          <ArrowRigth styles={'sm:rotate-0 rotate-90'} />
         </button>
       </div>
 
