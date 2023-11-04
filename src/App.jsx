@@ -7,6 +7,7 @@ import { KidsDashTab } from './components/Dasbord/Kids/KidsDashTab'
 import { EmployDasTab } from './components/Dasbord/Master/EmployDasTab'
 import { FatherDasTab } from './components/Dasbord/Fathers/FatherDasTab'
 import { ErrorPage } from './Pages/404'
+import { GrapiElemant } from './components/Graphi/GaphiElement'
 
 function App () {
   return (
@@ -24,6 +25,10 @@ function App () {
           <Route
             path='father'
             element={<DashElemet Component={FatherDasTab} />}
+          />
+          <Route
+            path='graphi'
+            element={<DashElemet Component={GrapiElemant} />}
           />
 
         </Route>
