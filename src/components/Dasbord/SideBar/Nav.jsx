@@ -1,5 +1,4 @@
 import { NavLink } from 'react-router-dom'
-import react from '../../../assets/react.svg'
 import { DarkThemeToggle } from 'flowbite-react'
 import { useState } from 'react'
 import { Avatar } from '../../Icons'
