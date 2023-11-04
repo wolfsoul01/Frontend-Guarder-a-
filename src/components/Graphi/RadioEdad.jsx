@@ -1,42 +1,48 @@
-import ReactECharts from 'echarts-for-react';
+import ReactECharts from 'echarts-for-react'
 
+const info = [
+  { value: 8, name: '1 Años' },
+  { value: 5, name: '2 Años' },
+  { value: 10, name: '3 Años' },
+  { value: 5, name: '4 Años' },
+  { value: 2, name: '5 Años' }
+]
 
-export function RadiosEdad() {
-    const options = {
-        title: {
-          text: '% De edades ',
-          left: 'center',
-          top: 'center'
+export function RadiosEdad () {
+  const options = {
+    legend: {
+      orient: 'vertical',
+      x: 'left',
+      data: info.map(e=>`${e.name}`),
+    },
+    title: {
+      text: '',
+      left: 'center',
+      top: 'center'
+    },
+    series: [
+      {
+        type: 'pie',
+        radius: ['50%', '70%'],
+        avoidLabelOverlap: false,
+        label: {
+          show: false,
+          position: 'center'
         },
-        series: [
-          {
-            type: 'pie',
-            data: [
-              {
-                value: 335,
-                name: '1'
-              },
-              {
-                value: 234,
-                name: '2'
-              },
-              {
-                value: 1548,
-                name: '3'
-              },
-              {
-                value: 800,
-                name: '4'
-              },
-              {
-                value: 100,
-                name: '5'
-              }
-            ],
-            radius: ['40%', '70%']
+        labelLine: {
+          show: false
+        },
+        emphasis: {
+          label: {
+            show: true,
+            fontSize: '30',
+            fontWeight: 'bold'
           }
-        ]
-      };
-  
-  return <ReactECharts option={options} />; 
+        },
+        data:info
+      }
+    ]
+  }
+
+  return <ReactECharts option={options} />
 }
