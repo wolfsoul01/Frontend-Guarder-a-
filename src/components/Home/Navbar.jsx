@@ -68,7 +68,7 @@ export function Navbar () {
                   <span className='absolute left-0 bottom-0 bg-teal-400 w-0 group-hover:w-full h-[2px] transition-all duration-150 '></span>
                 </li>
                 <li className='relative group '>
-                  <NavLink to={'/dashbord'}>Dashbord</NavLink>
+                  <NavLink to={'/dashbord/kids'}>Dashbord</NavLink>
                   <span className='absolute left-0 bottom-0 bg-teal-400 w-0 group-hover:w-full h-[2px] transition-all duration-150 '></span>
                 </li>
               </ul>
