@@ -10,8 +10,9 @@ export default function Hero () {
       <header className='p-3 m-3 '>
         <section className='flex flex-col gap-3 justify-center items-center max-w-xl md:max-w-2xl my-0 mx-auto backdrop-blur-sm p-5 '>
           <header className='mt-10'>
-            <h1 className='text-4xl md:text-6xl lg:text-6xl text-primary  font-bold text-center'>
+            <h1 className=' relative text-4xl md:text-6xl lg:text-6xl text-transparent bg-gradient-to-r to-yellow-200 from-amber-500 bg-clip-text  font-bold text-center bg-transparent '>
               Guarderia Matanzas
+             
             </h1>
           </header>
           <p className='text-yellow-300 text-base max-w-sm text-center md:text-2xl relative'>

@@ -11,7 +11,13 @@ export default {
   theme: {
     extend: {
       backgroundColor:{
-        primary:"#FFD700"
+        primary:"#FFD700",
+        dashboard:{
+          100:'#FFF4F4',
+          200:'#F7E6C4',
+          300:'#F1C376',
+          400:'#606C5D',
+        }
       },
       textColor:{
         primary:"#FFD700"
