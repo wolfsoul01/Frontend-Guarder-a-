@@ -70,28 +70,28 @@ export function EmployDasTab ({ info }) {
 
       <Table className='shadow-lg'>
         <Table.Head className=' [&>div]:bg-black'>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold '>
             Nombre
           </Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold '>
             Apellido
           </Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold '>
             Edad
           </Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold '>
             Sala
           </Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold '>
             Fecha de Contra
           </Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold '>
             Sueldo
           </Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold '>
             Status
           </Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold '>
             More..
           </Table.HeadCell>
         </Table.Head>
@@ -101,8 +101,8 @@ export function EmployDasTab ({ info }) {
               <Table.Row
                 key={kid.id}
                 className={`${
-                  i % 2 === 0 ? 'bg-gray-700 text-white' : 'text-black'
-                } hover: `}
+                  i % 2 === 0 ? 'bg-dashboard-200' : 'text-black'
+                } hover:  text-black`}
               >
                 <Table.Cell>{kid.nombre}</Table.Cell>
                 <Table.Cell>{kid.apellidos}</Table.Cell>

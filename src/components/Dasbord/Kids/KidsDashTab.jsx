@@ -69,13 +69,13 @@ export function KidsDashTab ({ info }) {
 
       <Table className='shadow-lg'>
         <Table.Head className=' [&>div]:bg-black'>
-          <Table.HeadCell className='bg-zinc-500 text-white'>Nombre</Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>Apellido</Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>Edad</Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>Sala</Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>Fecha de ingreso</Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>Status</Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>More..</Table.HeadCell>
+          <Table.HeadCell className='bg-dashboard-300 font-bold'>Nombre</Table.HeadCell>
+          <Table.HeadCell className='bg-dashboard-300 font-bold'>Apellido</Table.HeadCell>
+          <Table.HeadCell className='bg-dashboard-300 font-bold'>Edad</Table.HeadCell>
+          <Table.HeadCell className='bg-dashboard-300 font-bold'>Sala</Table.HeadCell>
+          <Table.HeadCell className='bg-dashboard-300 font-bold'>Fecha de ingreso</Table.HeadCell>
+          <Table.HeadCell className='bg-dashboard-300 font-bold'>Status</Table.HeadCell>
+          <Table.HeadCell className='bg-dashboard-300 font-bold'>More..</Table.HeadCell>
         </Table.Head>
         <Table.Body className=''>
         {kids.map((kid, i) => {
@@ -84,7 +84,7 @@ export function KidsDashTab ({ info }) {
                 key={kid.id}
                 className={`${
                   i % 2 === 0
-                    ? 'bg-gray-700 text-white'
+                    ? 'bg-dashboard-200 text-black'
                     : 'text-black'
                 } `}
               >

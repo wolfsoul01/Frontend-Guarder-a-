@@ -26,7 +26,7 @@ export function FatherDasTab ({ info }) {
             type='text'
             name='search'
             id='users-search'
-            className='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  focus:border-slate-500 block  p-2.5 w-1/2'
+            className='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  focus:border-sdasbg-dashboard-300 block  p-2.5 w-1/2'
             placeholder='Search for users'
             onChange={null}
           />
@@ -72,25 +72,25 @@ export function FatherDasTab ({ info }) {
 
       <Table className='shadow-lg'>
         <Table.Head className=' [&>div]:bg-black'>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold'>
             Nombre
           </Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold'>
             Telefono
           </Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold'>
             Niño Nombre
           </Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold'>
             Aula
           </Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold'>
             Parentesco
           </Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold'>
             Status
           </Table.HeadCell>
-          <Table.HeadCell className='bg-zinc-500 text-white'>
+          <Table.HeadCell className='bg-dashboard-300 dark:text-white font-bold'>
             More..
           </Table.HeadCell>
         </Table.Head>
@@ -100,8 +100,8 @@ export function FatherDasTab ({ info }) {
               <Table.Row
                 key={ele.id}
                 className={`${
-                  i % 2 === 0 ? 'bg-gray-700 text-white' : 'text-black'
-                } hover: `}
+                  i % 2 === 0 ? 'bg-dashboard-200 ' : 'text-black'
+                } hover: text-black`}
               >
                 <Table.Cell>{ele.nombrePadre}</Table.Cell>
                 <Table.Cell>{ele.telefonoPadre}</Table.Cell>
@@ -111,8 +111,8 @@ export function FatherDasTab ({ info }) {
                 <Table.Cell>
                   <span
                     className={`${
-                      ele.estadoNino ? 'bg-green-500 ' : 'bg-red-500'
-                    } p-2 rounded-lg text-white`}
+                      ele.estadoNino ? 'bg-gdasbg-dashboard-300 ' : 'bgdasbg-dashboard-300'
+                    } p-2 rounded-lg text-black`}
                   >
                     condicion
                   </span>

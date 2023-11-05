@@ -4,10 +4,12 @@ export function useDate (pathname) {
   if (path === 'kids') {
     return kids
   } else if (path === 'employ') {
-    return empleados
+    return employ
   }
   else if(path ==='father'){
     return ninosYpadres
+  }else if(path === 'graphi'){
+    return {kids,padres,employ}
   }
 }
 
@@ -179,7 +181,7 @@ const kids = [
   }
 ]
 
-const empleados = [
+const employ = [
   {
     id: 1,
     nombre: 'Ana',

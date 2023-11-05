@@ -9,16 +9,16 @@ export function DashElemet ({ Component }) {
   return (
     <>
       <section>
-        <aside className=' grid grid-cols-3 gap-6 text-white '>
-          <article className='bg-slate-800 rounded-md grid place-content-center p-3'>
+        <aside className=' grid grid-cols-3 gap-6 text-black '>
+          <article className='bg-dashboard-200 rounded-md grid place-content-center p-3'>
             <h1>Info</h1>
             <p>{} </p>
           </article>
-          <article className='bg-slate-800 rounded-md grid place-content-center p-3'>
+          <article className='bg-dashboard-200 rounded-md grid place-content-center p-3'>
             <h1>Info</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
           </article>
-          <article className='bg-slate-800 rounded-md grid place-content-center p-3'>
+          <article className='bg-dashboard-200 rounded-md grid place-content-center p-3'>
             <h1>Info</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
           </article>
