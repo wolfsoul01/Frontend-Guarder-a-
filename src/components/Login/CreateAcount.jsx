@@ -1,5 +1,5 @@
-import {ArrowRigth} from '../Icons'
-
+import { ArrowRigth } from '../Icons'
+import { NavLink } from 'react-router-dom'
 // eslint-disable-next-line react/prop-types
 export function CreateForm ({ hancleClik }) {
   return (
@@ -9,22 +9,28 @@ export function CreateForm ({ hancleClik }) {
 
         <p className='mt-4 text-gray-500 relative'>
           Bienvenidos a{' '}
-          <span className='uppercase text-yellow-500 font-semibold'>
+          <span className='uppercase text-amber-500 font-semibold'>
             guardy-yamy
           </span>
           , un lugar mágico donde los niños{' '}
-          <span className='text-yellow-500 font-medium'>aprenden</span> y se{' '}
-          <span className='text-yellow-500 font-medium'>divierten</span> a
+          <span className='text-amber-500 font-medium'>aprenden</span> y se{' '}
+          <span className='text-amber-500 font-medium'>divierten</span> a
           través del juego y la imaginación. Inicia sesión para formar parte de
           nuestra comunidad educativa.
         </p>
-        <button className=' text-center w-1/2 mx-auto class="w-[150px] bg-black h-[50px] my-3 flex items-center justify-center gap-1 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-yellow-200 before:to-amber-500 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff] hover:text-black font-semibold' onClick={hancleClik}>
-          Create Acount
+        <button
+          className=' text-center w-1/2 mx-auto class="w-[150px] bg-black h-[50px] my-3 flex items-center justify-center gap-1 rounded-xl cursor-pointer relative overflow-hidden transition-all duration-500 ease-in-out shadow-md hover:scale-105 hover:shadow-lg before:absolute before:top-0 before:-left-full before:w-full before:h-full before:bg-gradient-to-r before:from-yellow-200 before:to-amber-500 before:transition-all before:duration-500 before:ease-in-out before:z-[-1] before:rounded-xl hover:before:left-0 text-[#fff] hover:text-black font-semibold'
+          onClick={hancleClik}
+        >
+          Ya tines una cuenta 
           <ArrowRigth styles={'sm:rotate-0 rotate-90'} />
         </button>
       </div>
 
-      <form action='' className='mx-auto mb-0 mt-8 max-w-md space-y-4'>
+      <form
+        action='/dashbord/kids'
+        className='mx-auto mb-0 mt-8 max-w-md space-y-4'
+      >
         <div>
           <label
             htmlFor='hs-leading-icon'
@@ -34,11 +40,10 @@ export function CreateForm ({ hancleClik }) {
           </label>
           <div className='relative'>
             <input
-              type='text'
-              id='hs-leading-icon'
-              name='hs-leading-icon'
+              type='email'
               className='py-3 px-4 pl-11 block w-full border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400'
-              placeholder='you@site.com'
+             required
+              placeholder='email@site.com'
             />
             <div className='absolute inset-y-0 left-0 flex items-center pointer-events-none z-20 pl-4'>
               <svg
@@ -64,6 +69,8 @@ export function CreateForm ({ hancleClik }) {
             <div className='relative'>
               <input
                 type='password'
+                required
+                minLength={8}
                 className='w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm'
                 placeholder='Enter password'
               />
@@ -96,6 +103,7 @@ export function CreateForm ({ hancleClik }) {
             <div className='relative'>
               <input
                 type='password'
+                required
                 className='w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm'
                 placeholder='Enter password'
               />
@@ -134,7 +142,8 @@ export function CreateForm ({ hancleClik }) {
           </label>
           <div className='relative'>
             <input
-              type='text'
+            required
+              type='number'
               className='py-3 px-4 pr-11 block w-full border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400'
               placeholder='xxxx-xxxx-xxxx-xxxx'
             />
@@ -156,14 +165,13 @@ export function CreateForm ({ hancleClik }) {
 
         <div className='flex items-center justify-between'>
           <p className='text-sm text-gray-500'>
-            No account?
-            <button className='underline' onClick={hancleClik}>
-              Sign up
-            </button>
+            <NavLink className='underline' to={'/'}>
+              Volver
+            </NavLink>
           </p>
 
-          <button className='inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white'>
-            Sign in
+          <button className='inline-block rounded-lg  px-5 py-3 text-sm font-medium bg-gradient-to-tr to-yellow-200 from-amber-500 shadow-md hover:scale-105'>
+            Crear
           </button>
         </div>
       </form>

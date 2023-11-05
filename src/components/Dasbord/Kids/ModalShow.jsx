@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Button, Modal } from 'flowbite-react'
 
-import { Label, TextInput } from 'flowbite-react'
-
 // eslint-disable-next-line react/prop-types
 export default function ModalShow ({ openModal, handleModal, selectKid }) {
   // eslint-disable-next-line react/prop-types

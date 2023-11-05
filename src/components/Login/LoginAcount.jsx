@@ -1,5 +1,5 @@
 import { ArrowRigth } from '../Icons'
-
+import { NavLink } from 'react-router-dom'
 // eslint-disable-next-line react/prop-types
 export function LoginForm ({ hancleClik }) {
   return (
@@ -9,12 +9,12 @@ export function LoginForm ({ hancleClik }) {
 
         <p className='mt-4 text-gray-500 relative'>
           Bienvenidos a{' '}
-          <span className='uppercase text-yellow-500 font-semibold'>
+          <span className='uppercase text-amber-500 font-semibold'>
             guardy-yamy
           </span>
           , un lugar mágico donde los niños{' '}
-          <span className='text-yellow-500 font-medium'>aprenden</span> y se{' '}
-          <span className='text-yellow-500 font-medium'>divierten</span> a
+          <span className='text-amber-500 font-medium'>aprenden</span> y se{' '}
+          <span className='text-amber-500 font-medium'>divierten</span> a
           través del juego y la imaginación. Inicia sesión para formar parte de
           nuestra comunidad educativa.
         </p>
@@ -23,11 +23,14 @@ export function LoginForm ({ hancleClik }) {
           onClick={hancleClik}
         >
           <ArrowRigth styles={'sm:rotate-180 -rotate-90'} />
-          Inicia Seccion
+          No tines una cuenta
         </button>
       </div>
 
-      <form action='' className='mx-auto mb-0 mt-8 max-w-md space-y-4'>
+      <form
+        action='/dashbord/kids'
+        className='mx-auto mb-0 mt-8 max-w-md space-y-4'
+      >
         <label
           htmlFor='hs-leading-icon'
           className='block text-sm font-medium mb-2 dark:text-white'
@@ -36,9 +39,8 @@ export function LoginForm ({ hancleClik }) {
         </label>
         <div className='relative'>
           <input
-            type='text'
-            id='hs-leading-icon'
-            name='hs-leading-icon'
+            type='email'
+            required
             className='py-3 px-4 pl-11 block w-full border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400'
             placeholder='you@site.com'
           />
@@ -64,6 +66,8 @@ export function LoginForm ({ hancleClik }) {
           <div className='relative'>
             <input
               type='password'
+              required
+              minLength={8}
               className='w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm'
               placeholder='Enter password'
             />
@@ -95,14 +99,13 @@ export function LoginForm ({ hancleClik }) {
 
         <div className='flex items-center justify-between'>
           <p className='text-sm text-gray-500'>
-            No account?
-            <button className='underline' onClick={hancleClik}>
-              Sign up
-            </button>
+            <NavLink className='underline' to={'/'}>
+              Volver
+            </NavLink>
           </p>
 
-          <button className='inline-block rounded-lg bg-blue-500 px-5 py-3 text-sm font-medium text-white'>
-            Sign in
+          <button className='inline-block rounded-lg  px-5 py-3 text-sm font-medium bg-gradient-to-tr to-yellow-200 from-amber-500 shadow-md hover:scale-105'>
+            Iniciar 
           </button>
         </div>
       </form>
