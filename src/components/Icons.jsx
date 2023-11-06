@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // eslint-disable-next-line react/prop-types
 export function HambMenu ({ handleClick }) {
   return (
@@ -15,7 +16,7 @@ export function HambMenu ({ handleClick }) {
   )
 }
 
-export function Edit () {
+export function EditIcon ({ styles }) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -23,7 +24,7 @@ export function Edit () {
       viewBox='0 0 24 24'
       strokeWidth={1.5}
       stroke='currentColor'
-      className='w-6 h-6'
+      className={`w-6 h-6 ${styles}`}
     >
       <path
         strokeLinecap='round'
@@ -33,7 +34,7 @@ export function Edit () {
     </svg>
   )
 }
-export function More () {
+export function MoreIcon ({ styles }) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -41,7 +42,7 @@ export function More () {
       viewBox='0 0 24 24'
       strokeWidth={1.5}
       stroke='currentColor'
-      className='w-6 h-6'
+      className={`w-6 h-6 ${styles}`}
     >
       <path
         strokeLinecap='round'
@@ -51,7 +52,7 @@ export function More () {
     </svg>
   )
 }
-export function Delet () {
+export function DeletIcon ({ styles }) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -59,7 +60,7 @@ export function Delet () {
       viewBox='0 0 24 24'
       strokeWidth={1.5}
       stroke='currentColor'
-      className='w-6 h-6'
+      className={`w-6 h-6 ${styles}`}
     >
       <path
         strokeLinecap='round'
@@ -70,7 +71,7 @@ export function Delet () {
   )
 }
 
-export function Add () {
+export function AddIcon ({ styles }) {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -78,7 +79,7 @@ export function Add () {
       viewBox='0 0 24 24'
       strokeWidth={1.5}
       stroke='currentColor'
-      className='w-6 h-6'
+      className={`w-6 h-6 ${styles}`}
     >
       <path
         strokeLinecap='round'

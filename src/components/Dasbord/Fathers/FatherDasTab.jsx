@@ -1,7 +1,7 @@
 import { Table } from 'flowbite-react'
 import { useState } from 'react'
 
-import { Add, Delet, Edit, More } from '../../Icons'
+import { AddIcon,  DeletIcon,  EditIcon,  MoreIcon } from '../../Icons'
 import ModalEdit from './ModalEdit'
 import ModalShow from './ModalShow'
 import ModalCreate from './ModalCrate'
@@ -33,7 +33,7 @@ export function FatherDasTab ({ info }) {
 
           <aside className='flex gap-2 border-l border-gray-400 py-2 px-3'>
             <button className='flex ' onClick={() => setModalCreate(true)}>
-              <Add />
+              <AddIcon  styles='text-green-500  mx-1' />
               Add User
             </button>
           </aside>
@@ -125,7 +125,7 @@ export function FatherDasTab ({ info }) {
                       setModalShow(true)
                     }}
                   >
-                    <More />
+                    <MoreIcon styles={'hover:scale-110 hover:brightness-110'} />
                   </button>
                   <button
                     className='cursor-pointer'
@@ -134,10 +134,10 @@ export function FatherDasTab ({ info }) {
                       setModalEdit(true)
                     }}
                   >
-                    <Edit />
+                    <EditIcon styles={'text-yellow-500 hover:scale-110 hover:brightness-110'}/>
                   </button>
                   <button className='cursor-pointer'>
-                    <Delet />
+                  <DeletIcon styles={'text-red-500 hover:scale-110 hover:brightness-110'} />
                   </button>
                 </Table.Cell>
               </Table.Row>

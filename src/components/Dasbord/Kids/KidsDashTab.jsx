@@ -1,7 +1,7 @@
 import { Table } from 'flowbite-react'
 import { useState } from 'react'
 
-import { Add, Delet, Edit, More } from '../../Icons'
+import { AddIcon,  DeletIcon,  EditIcon,  MoreIcon } from '../../Icons'
 import ModalEdit from './ModalEdit'
 import ModalShow from './ModalShow'
 import ModalCreate from './ModalCrate'
@@ -27,14 +27,14 @@ export function KidsDashTab ({ info }) {
             type='text'
             name='search'
             id='users-search'
-            className='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  focus:border-slate-500 block  p-2.5 w-1/2'
+            className='bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg  focus:border-slate-500 block  p-2.5 w-1/2 '
             placeholder='Search for users'
             onChange={null}
           />
 
-          <aside className='flex gap-2 border-l border-gray-400 py-2 px-3'>
+          <aside className='flex gap-3 border-l border-gray-400 py-2 px-3'>
             <button className='flex ' onClick={() => setModalCreate(true)}>
-              <Add />
+              <AddIcon styles='text-green-500  mx-1' />
               Add User
             </button>
           </aside>
@@ -110,19 +110,19 @@ export function KidsDashTab ({ info }) {
                       setModalShow(true)
                     }}
                   >
-                    <More />
+                    <MoreIcon styles={'hover:scale-110 hover:brightness-110'} />
                   </button>
                   <button
-                    className='cursor-pointer'
+                    className='cursor-pointer hover:brightness-110'
                     onClick={() => {
                       setSelectKid(kid)
                       setModalEdit(true)
                     }}
                   >
-                    <Edit />
+                    <EditIcon styles={'text-yellow-500 hover:scale-110 hover:brightness-110'} />
                   </button>
                   <button className='cursor-pointer'>
-                    <Delet />
+                    <DeletIcon styles={'text-red-500 hover:scale-110 hover:brightness-110'} />
                   </button>
                 </Table.Cell>
               </Table.Row>
