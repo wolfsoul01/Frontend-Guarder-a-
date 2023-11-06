@@ -1,7 +1,9 @@
 import { ArrowRigth } from '../Icons'
 import { NavLink } from 'react-router-dom'
 // eslint-disable-next-line react/prop-types
-export function LoginForm ({ hancleClik }) {
+export function LoginForm ({ hancleClik,errorMessage }) {
+
+
   return (
     <div className='w-full px-4 py-12 sm:px-6  lg:w-1/2 lg:px-8 '>
       <div className='mx-auto max-w-lg text-center relative'>
@@ -31,12 +33,14 @@ export function LoginForm ({ hancleClik }) {
         action='/dashbord/kids'
         className='mx-auto mb-0 mt-8 max-w-md space-y-4'
       >
+        {errorMessage && <h1 className='text-red-500 '>{errorMessage}</h1>}
         <label
           htmlFor='email'
           className='block text-sm font-medium mb-2 dark:text-white'
         >
          Correo
         </label>
+
         <div className='relative'>
           <input
             type='email'

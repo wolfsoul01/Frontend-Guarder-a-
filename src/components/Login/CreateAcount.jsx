@@ -63,7 +63,7 @@ export function CreateForm ({ hancleClik }) {
         <div className='grid grid-cols-2 gap-x-2'>
           <div>
           <label
-            htmlFor='password'
+            htmlFor='passwordCreate'
             className='block text-sm font-medium mb-2 dark:text-white'
           >
             Contraseña 
@@ -72,7 +72,7 @@ export function CreateForm ({ hancleClik }) {
             <div className='relative'>
               <input
                 type='password'
-                id='password'
+                id='passwordCreate'
                 required
                 minLength={8}
                 className='w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm'

@@ -8,6 +8,7 @@ import { EmployDasTab } from './components/Dasbord/Employ/EmployDasTab'
 import { FatherDasTab } from './components/Dasbord/Fathers/FatherDasTab'
 import { ErrorPage } from './Pages/404'
 import { GrapiElemant } from './components/Graphi/GaphiElement'
+import { ProtectedRoutes } from './components/ProtectedRoutes'
 
 function App () {
   return (
@@ -15,13 +16,20 @@ function App () {
       <Routes>
         <Route path='/' element={<Home />} />
 
-        <Route path='/dashbord' element={<Dashbord />}>
+        <Route
+          path='/dashbord'
+          element={
+            <ProtectedRoutes>
+              <Dashbord />
+            </ProtectedRoutes>
+          }
+        >
           <Route path='kids' element={<DashElemet Component={KidsDashTab} />} />
           <Route
             path='employ'
             element={<DashElemet Component={EmployDasTab} />}
           />
-          
+
           <Route
             path='father'
             element={<DashElemet Component={FatherDasTab} />}
@@ -30,11 +38,10 @@ function App () {
             path='graphi'
             element={<DashElemet Component={GrapiElemant} />}
           />
-
         </Route>
-        <Route path='/login' element={<Login />} />
+        <Route path='/login' element={<Login err />} />
 
-        <Route path='*' element={<ErrorPage/>} />
+        <Route path='*' element={<ErrorPage />} />
       </Routes>
     </>
   )
