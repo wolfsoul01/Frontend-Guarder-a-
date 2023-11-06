@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 // eslint-disable-next-line react/prop-types
 export function CreateForm ({ hancleClik }) {
   return (
-    <div className='w-full px-4 py-10 sm:px-6 sm:py-12 lg:w-1/2 lg:px-8 lg:py-16'>
+    <div className='w-full px-4 py-10 sm:px-6  lg:w-1/2 lg:px-8 '>
       <div className='mx-auto max-w-lg text-center relative'>
         <h1 className='text-2xl font-bold sm:text-3xl'>Crear Cuenta </h1>
 
@@ -36,14 +36,14 @@ export function CreateForm ({ hancleClik }) {
             htmlFor='hs-leading-icon'
             className='block text-sm font-medium mb-2 dark:text-white'
           >
-            Email address
+            Correo 
           </label>
           <div className='relative'>
             <input
               type='email'
               className='py-3 px-4 pl-11 block w-full border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400'
              required
-              placeholder='email@site.com'
+              placeholder='tucorreo@gamil.com'
             />
             <div className='absolute inset-y-0 left-0 flex items-center pointer-events-none z-20 pl-4'>
               <svg
@@ -62,13 +62,17 @@ export function CreateForm ({ hancleClik }) {
 
         <div className='grid grid-cols-2 gap-x-2'>
           <div>
-            <label htmlFor='password' className='sr-only'>
-              Password
-            </label>
+          <label
+            htmlFor='password'
+            className='block text-sm font-medium mb-2 dark:text-white'
+          >
+            Contraseña 
+          </label>
 
             <div className='relative'>
               <input
                 type='password'
+                id='password'
                 required
                 minLength={8}
                 className='w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm'
@@ -100,10 +104,17 @@ export function CreateForm ({ hancleClik }) {
             </div>
           </div>
           <div>
+          <label
+            htmlFor='password2'
+            className='block text-sm font-medium mb-2 dark:text-white'
+          >
+            Confirme su Contraseña 
+          </label>
             <div className='relative'>
               <input
                 type='password'
                 required
+                id='password2'
                 className='w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm'
                 placeholder='Enter password'
               />
@@ -138,7 +149,7 @@ export function CreateForm ({ hancleClik }) {
             htmlFor='hs-trailing-icon'
             className='block text-sm font-medium mb-2 dark:text-white'
           >
-            Card number
+            Numero de Trajeta 
           </label>
           <div className='relative'>
             <input
@@ -146,6 +157,7 @@ export function CreateForm ({ hancleClik }) {
               type='number'
               className='py-3 px-4 pr-11 block w-full border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400'
               placeholder='xxxx-xxxx-xxxx-xxxx'
+              min={0}
             />
             <div className='absolute inset-y-0 right-0 flex items-center pointer-events-none z-20 pr-4'>
               <svg

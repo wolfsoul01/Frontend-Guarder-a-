@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 // eslint-disable-next-line react/prop-types
 export function LoginForm ({ hancleClik }) {
   return (
-    <div className='w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24'>
+    <div className='w-full px-4 py-12 sm:px-6  lg:w-1/2 lg:px-8 '>
       <div className='mx-auto max-w-lg text-center relative'>
         <h1 className='text-2xl font-bold sm:text-3xl'>Inicia Sesion </h1>
 
@@ -32,15 +32,16 @@ export function LoginForm ({ hancleClik }) {
         className='mx-auto mb-0 mt-8 max-w-md space-y-4'
       >
         <label
-          htmlFor='hs-leading-icon'
+          htmlFor='email'
           className='block text-sm font-medium mb-2 dark:text-white'
         >
-          Email address
+         Correo
         </label>
         <div className='relative'>
           <input
             type='email'
             required
+            id='email'
             className='py-3 px-4 pl-11 block w-full border-gray-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400'
             placeholder='you@site.com'
           />
@@ -59,14 +60,18 @@ export function LoginForm ({ hancleClik }) {
         </div>
 
         <div>
-          <label htmlFor='password' className='sr-only'>
-            Password
+        <label
+            htmlFor='password'
+            className='block text-sm font-medium mb-2 dark:text-white'
+          >
+            Contraseña 
           </label>
 
           <div className='relative'>
             <input
               type='password'
               required
+              id='password'
               minLength={8}
               className='w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-sm'
               placeholder='Enter password'

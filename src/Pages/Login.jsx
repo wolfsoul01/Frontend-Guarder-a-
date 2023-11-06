@@ -17,7 +17,7 @@ function Login () {
         <LoginForm hancleClik={handleClik}/>
         
 
-        <div className={`absolute  z-50 h-1/2   w-full   lg:h-full lg:w-1/2 ${isLogin? '' : 'sm:translate-x-full  sm:translate-y-0 translate-y-full'} transition-all duration-200 `}>
+        <div className={`absolute  z-50 h-1/2   w-full lg:h-full  lg:w-1/2 ${isLogin? '' : 'sm:translate-x-full  sm:translate-y-0 translate-y-full'} transition-all duration-200 `}>
           <img
             alt='Welcome'
             src='/img/login.jpg'
