@@ -7,7 +7,7 @@ import { KidsDashTab } from './components/Dasbord/Kids/KidsDashTab'
 import { EmployDasTab } from './components/Dasbord/Employ/EmployDasTab'
 import { FatherDasTab } from './components/Dasbord/Fathers/FatherDasTab'
 import { ErrorPage } from './Pages/404'
-import { GrapiElemant } from './components/Graphi/GaphiElement'
+import { GrapiElemant } from './components/Dasbord/Graphi/GaphiElement'
 import { ProtectedRoutes } from './components/ProtectedRoutes'
 
 function App () {

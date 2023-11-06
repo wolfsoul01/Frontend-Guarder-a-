@@ -6,7 +6,7 @@ import { RadiosEdad } from './RadioEdad'
 
 export function GrapiElemant ({info=[]}) {
 
-  const {kid=[],padres=[],employ=[]}= info
+  const {kids=[],padres=[],employ=[]}= info
 
   return (
     <>
@@ -21,7 +21,7 @@ export function GrapiElemant ({info=[]}) {
 
         <article className=' bg-dashboard-200 rounded-xl p-2 '>
           <h1 className='w-full text-center font-bold text-xl'>% Por Edades</h1>
-          <RadiosEdad />
+          <RadiosEdad kids={kids} />
         </article>
 
         <article className='bg-dashboard-200 rounded-xl p-2 col-span-2'>
