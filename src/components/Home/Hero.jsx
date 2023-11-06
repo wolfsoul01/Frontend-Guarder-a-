@@ -19,12 +19,12 @@ export default function Hero () {
             Guardando risas y construyendo sonrisas, ¡donde la infancia brilla!
           </p>
 
-          <button className='cursor-pointer font-semibold overflow-hidden relative z-100 border border-yellow-400 group px-8 py-2'>
-            <span className='relative z-10 text-yellow-300 group-hover:text-black text-xl duration-500'>
-              Magic !
+          <button className='cursor-pointer font-semibold overflow-hidden relative z-100 border border-yellow-400 group px-8 py-2 rounded-md'>
+            <span className='relative z-10 text-yellow-300 group-hover:text-black text-xl duration-500 '>
+              Contactanos
             </span>
-            <span className='absolute w-full h-full bg-yellow-300 -left-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:left-0 duration-500'></span>
-            <span className='absolute w-full h-full  bg-yellow-300 -right-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:right-0 duration-500'></span>
+            <span className='absolute w-full h-full bg-yellow-300 -left-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:left-0 duration-500 rounded-sm'></span>
+            <span className='absolute w-full h-full  bg-yellow-300 -right-32 top-0 -rotate-45 group-hover:rotate-0 group-hover:right-0 duration-500 rounded-sm'></span>
           </button>
         </section>
       </header>
