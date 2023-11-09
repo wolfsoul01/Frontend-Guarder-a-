@@ -10,7 +10,7 @@ function Dashbord () {
             <Sidebar />
           </header>
 
-          <main className=' h-full sm:ml-52  p-5 mt-16  bg-dashboard-100 '>
+          <main className=' h-full sm:ml-44  p-5 mt-16  bg-dashboard-100 '>
             <Outlet />
           </main>
         </Flowbite>
