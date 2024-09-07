@@ -57,10 +57,6 @@ export function Navbar () {
                   Contacto
                   <span className='absolute left-0 bottom-0 bg-yellow-300 w-0 group-hover:w-full h-[2px] transition-all duration-150 '></span>
                 </li>
-                <li className='relative group '>
-                  <NavLink to={'/dashbord/kids'}>Dashbord</NavLink>
-                  <span className='absolute left-0 bottom-0 bg-yellow-300 w-0 group-hover:w-full h-[2px] transition-all duration-150 '></span>
-                </li>
               </ul>
             </nav>
             {/* NavBar for Destokp */}
